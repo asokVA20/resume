@@ -1,0 +1,119 @@
+---
+alwaysApply: true
+---
+# Resume Website Project Rules
+
+## 🎯 Project Overview
+- This is a personal resume/portfolio website project
+- Focus on clean, professional, and modern design
+- Priority on responsiveness, accessibility, and performance
+- Target audience: recruiters, hiring managers, and technical interviewers
+
+## 🛠 Tech Stack & Framework Rules
+- **Framework**: Use Next.js 15+ with App Router
+- **Styling**: Use Tailwind CSS for all styling components
+- **Language**: TypeScript for all components and utilities
+- **State Management**: Use React hooks (useState, useEffect) - no external state libraries unless specified
+- **Icons**: Use Lucide React for all icon needs
+
+## 📁 Project Structure & Organization
+- Follow Next.js 15 App Router conventions
+- All components go in `/components` directory
+- Page components in `/app` directory
+- Utility functions in `/lib` or `/utils`
+- Types in `/types` directory
+- Static assets in `/public` directory
+
+## 🎨 Design & UX Rules
+- **Mobile-first approach**: Always design for mobile first, then tablet/desktop
+- **Color Scheme**: Use a professional color palette (blues, grays, neutral tones)
+- **Typography**: 
+  - Use system fonts (Inter, system-ui, sans-serif)
+  - Maintain proper heading hierarchy (h1-h6)
+  - Ensure good contrast ratios (WCAG AA compliant)
+- **Layout**: 
+  - Single-page application style with smooth scrolling
+  - Consistent spacing using Tailwind's spacing scale
+  - Clean, minimalistic design with ample white space
+
+## ⚡ Component Development Rules
+- All components must be React functional components
+- Use TypeScript interfaces for all props
+- Implement proper accessibility attributes (aria-labels, roles)
+- Ensure all interactive elements are keyboard navigable
+- Export components as named exports
+
+## 📱 Responsiveness Rules
+- Breakpoints: sm:640px, md:768px, lg:1024px, xl:1280px
+- Test layouts on all breakpoints
+- Images must be responsive and optimized
+- Navigation should work seamlessly on mobile (hamburger menu)
+
+## 🔍 SEO & Performance Rules
+- All pages must have proper meta tags
+- Use Next.js Image component for all images
+- Implement lazy loading for below-the-fold content
+- Ensure Core Web Vitals targets are met (LCP, FID, CLS)
+- Add semantic HTML structure for better SEO
+
+## 📄 Resume-Specific Components
+### Hero Section
+- Include: Name, title, brief introduction, call-to-action buttons
+- Professional headshot (if available)
+- Social links/contact info
+
+### Experience Section
+- Reverse chronological order
+- Include: Company, role, dates, achievements (bullet points)
+- Use quantifiable metrics where possible
+
+### Skills Section
+- Categorized skills (Frontend, Backend, Tools, etc.)
+- Visual indicators (progress bars, skill levels, or tags)
+
+### Projects Section
+- Featured projects with descriptions
+- Technologies used for each project
+- Links to live demos and GitHub repositories
+
+### Education & Certifications
+- Degrees, institutions, dates
+- Relevant certifications and achievements
+
+## 🎯 Content Guidelines
+- Write concise, achievement-oriented content
+- Use action verbs in experience descriptions
+- Keep paragraphs short and scannable
+- Maintain consistent tone (professional but approachable)
+
+## 🔧 Code Quality Rules
+- Use ESLint and Prettier configuration
+- Write descriptive variable and function names
+- Add JSDoc comments for complex functions
+- Keep components small and focused (single responsibility)
+- Use meaningful alt text for all images
+
+## 🌐 Deployment & Build Rules
+- Optimize for production builds
+- Ensure environment variables are properly configured
+- Set up proper redirects and 404 pages
+- Implement sitemap.xml and robots.txt
+
+## 🚨 Error Handling
+- Implement proper error boundaries
+- Handle loading states gracefully
+- Provide fallback UI for failed image loads
+- Validate all form inputs with user-friendly error messages
+
+## 📈 Analytics & Tracking
+- Google Analytics 4 integration
+- Track important user interactions (downloads, contact form submissions)
+- Monitor performance metrics
+
+## 🔒 Security Rules
+- Sanitize user inputs in contact forms
+- Use environment variables for sensitive data
+- Implement proper CSP headers
+- No hardcoded API keys or secrets
+
+Remember: This website represents professional identity - prioritize quality, accessibility, and user experience above all else.
