@@ -246,11 +246,11 @@ window.addEventListener('scroll', () => {
 function initRotatingTitles() {
     const titles = [
         // 'IT / RPA Consultant',
-        'Software Engineer',
-        'Cross-Platform Engineer',
-        'Full-Stack Engineer',
-        'AI-Driven Solutions Engineer', 
-        'Automation Specialist',
+        '{Software Engineer}',
+        '{Cross-Platform Engineer}',
+        '</Full-Stack Engineer>',
+        '{AI-Driven Solutions Engineer}', 
+        '</Automation Specialist>',
         'DevOps / GitOps Engineer'
     ];
     

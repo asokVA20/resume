@@ -184,6 +184,7 @@ body {
     background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
     position: relative;
     overflow: hidden;
+    padding: var(--spacing-8) 0; /* Add padding to prevent content from touching edges */
 }
 
 .hero::before {
@@ -221,7 +222,10 @@ body {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: var(--spacing-6);
-    min-height: 1.2em;
+    min-height: 2.5em; /* Increased to accommodate longer titles */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .title-line {
@@ -235,6 +239,8 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     position: relative;
+    white-space: nowrap; /* Prevent text wrapping */
+    min-width: 200px; /* Ensure minimum width for shorter titles */
 }
 
 .rotating-title::after {
@@ -1168,6 +1174,12 @@ body {
 
     .hero-title {
         font-size: var(--font-size-4xl);
+        min-height: 3em; /* Increased for mobile to accommodate longer titles */
+    }
+
+    .rotating-title {
+        min-width: 150px; /* Smaller minimum width for mobile */
+        font-size: var(--font-size-4xl);
     }
 
     .hero-buttons {
@@ -1208,6 +1220,12 @@ body {
     }
 
     .hero-title {
+        font-size: var(--font-size-3xl);
+        min-height: 3.5em; /* Even more space for very small screens */
+    }
+
+    .rotating-title {
+        min-width: 120px; /* Smaller minimum width for very small screens */
         font-size: var(--font-size-3xl);
     }
 
