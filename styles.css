@@ -221,17 +221,55 @@ body {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: var(--spacing-6);
+    min-height: 1.2em;
 }
 
 .title-line {
     display: block;
 }
 
-.highlight {
+.rotating-title {
+    display: inline-block;
     background: linear-gradient(135deg, var(--primary-indigo), var(--secondary-yellow));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    position: relative;
+}
+
+.rotating-title::after {
+    content: '|';
+    color: var(--primary-indigo);
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes titleRotate {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 }
 
 .hero-subtitle {

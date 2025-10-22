@@ -242,22 +242,89 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Typing effect for hero title
-function initTypingEffect() {
-    const titleElement = document.querySelector('.hero-title');
-    if (titleElement) {
-        const text = titleElement.textContent;
-        titleElement.textContent = '';
+// Typewriter effect for rotating titles
+function initRotatingTitles() {
+    const titles = [
+        // 'IT / RPA Consultant',
+        'Software Engineer',
+        'Cross-Platform Engineer',
+        'Full-Stack Engineer',
+        'AI-Driven Solutions Engineer', 
+        'Automation Specialist',
+        'DevOps / GitOps Engineer'
+    ];
+    
+    const titleElement = document.getElementById('rotating-title');
+    if (!titleElement) return;
+    
+    let currentIndex = 0;
+    let isTyping = false;
+    let typeInterval;
+    
+    function typeText(text, callback) {
+        if (isTyping) return;
+        isTyping = true;
         
-        let i = 0;
-        const typeInterval = setInterval(() => {
-            titleElement.textContent += text.charAt(i);
-            i++;
-            if (i >= text.length) {
+        titleElement.textContent = '';
+        let charIndex = 0;
+        
+        typeInterval = setInterval(() => {
+            if (charIndex < text.length) {
+                titleElement.textContent += text.charAt(charIndex);
+                charIndex++;
+            } else {
                 clearInterval(typeInterval);
+                isTyping = false;
+                if (callback) callback();
             }
-        }, 100);
+        }, 100); // Typing speed: 100ms per character
     }
+    
+    function eraseText(callback) {
+        if (isTyping) return;
+        isTyping = true;
+        
+        const currentText = titleElement.textContent;
+        let charIndex = currentText.length;
+        
+        typeInterval = setInterval(() => {
+            if (charIndex > 0) {
+                titleElement.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                clearInterval(typeInterval);
+                isTyping = false;
+                if (callback) callback();
+            }
+        }, 50); // Erasing speed: 50ms per character (faster than typing)
+    }
+    
+    function rotateTitle() {
+        if (isTyping) return;
+        
+        const currentTitle = titles[currentIndex];
+        
+        // First erase current text
+        eraseText(() => {
+            // Then type new text
+            typeText(currentTitle, () => {
+                // Wait a bit before starting to erase again
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % titles.length;
+                    rotateTitle();
+                }, 2000); // Display time: 2 seconds
+            });
+        });
+    }
+    
+    // Start with first title
+    typeText(titles[currentIndex], () => {
+        // Start rotation after initial typing is complete
+        setTimeout(() => {
+            currentIndex = 1;
+            rotateTitle();
+        }, 2000);
+    });
 }
 
 // Smooth scroll for anchor links
@@ -278,8 +345,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
     
-    // Initialize typing effect after page load
-    setTimeout(initTypingEffect, 500);
+    // Initialize rotating titles after page load
+    setTimeout(initRotatingTitles, 500);
 });
 
 // Add CSS for loading animation
