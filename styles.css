@@ -377,6 +377,10 @@ body {
     position: relative;
     height: 500px;
     animation: fadeInRight 1s ease-out;
+    overflow: hidden;
+    background: radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 20% 60%, rgba(239, 68, 68, 0.1) 0%, transparent 50%);
 }
 
 .floating-elements {
@@ -389,14 +393,18 @@ body {
     position: absolute;
     background: var(--white);
     border-radius: var(--radius-xl);
-    padding: var(--spacing-4);
+    padding: var(--spacing-3);
     box-shadow: var(--shadow-lg);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-2);
+    gap: var(--spacing-1);
     animation: float 6s ease-in-out infinite;
     transition: var(--transition-normal);
+    min-width: 80px;
+    max-width: 120px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .floating-card:hover {
@@ -405,44 +413,110 @@ body {
 }
 
 .card-1 {
-    top: 20%;
-    left: 10%;
+    top: 10%;
+    left: 8%;
     animation-delay: 0s;
     background: linear-gradient(135deg, var(--primary-indigo), var(--indigo-light));
     color: var(--white);
 }
 
 .card-2 {
-    top: 10%;
-    right: 20%;
-    animation-delay: 1.5s;
+    top: 8%;
+    right: 12%;
+    animation-delay: 1s;
     background: linear-gradient(135deg, var(--secondary-yellow), var(--yellow-light));
     color: var(--white);
 }
 
 .card-3 {
-    bottom: 30%;
-    left: 20%;
-    animation-delay: 3s;
+    top: 35%;
+    right: 8%;
+    animation-delay: 2s;
     background: linear-gradient(135deg, var(--accent-red), var(--red-light));
     color: var(--white);
 }
 
 .card-4 {
-    bottom: 10%;
-    right: 10%;
-    animation-delay: 4.5s;
+    bottom: 35%;
+    left: 12%;
+    animation-delay: 3s;
+    background: linear-gradient(135deg, var(--gray-700), var(--gray-800));
+    color: var(--white);
+}
+
+.card-5 {
+    bottom: 8%;
+    right: 15%;
+    animation-delay: 4s;
+    background: linear-gradient(135deg, var(--primary-indigo), var(--indigo-light));
+    color: var(--white);
+}
+
+.card-6 {
+    top: 20%;
+    left: 25%;
+    animation-delay: 5s;
+    background: linear-gradient(135deg, var(--secondary-yellow), var(--yellow-light));
+    color: var(--white);
+}
+
+.card-7 {
+    top: 50%;
+    right: 30%;
+    animation-delay: 6s;
+    background: linear-gradient(135deg, var(--accent-red), var(--red-light));
+    color: var(--white);
+}
+
+.card-8 {
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 7s;
+    background: linear-gradient(135deg, var(--gray-700), var(--gray-800));
+    color: var(--white);
+}
+
+.card-9 {
+    top: 15%;
+    left: 45%;
+    animation-delay: 8s;
+    background: linear-gradient(135deg, var(--primary-indigo), var(--indigo-light));
+    color: var(--white);
+}
+
+.card-10 {
+    top: 60%;
+    left: 40%;
+    animation-delay: 9s;
+    background: linear-gradient(135deg, var(--secondary-yellow), var(--yellow-light));
+    color: var(--white);
+}
+
+.card-11 {
+    top: 45%;
+    left: 5%;
+    animation-delay: 10s;
+    background: linear-gradient(135deg, var(--accent-red), var(--red-light));
+    color: var(--white);
+}
+
+.card-12 {
+    bottom: 45%;
+    right: 5%;
+    animation-delay: 11s;
     background: linear-gradient(135deg, var(--gray-700), var(--gray-800));
     color: var(--white);
 }
 
 .floating-card i {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-lg);
 }
 
 .floating-card span {
     font-weight: 600;
-    font-size: var(--font-size-sm);
+    font-size: var(--font-size-xs);
+    text-align: center;
+    line-height: 1.2;
 }
 
 .scroll-indicator {
@@ -1181,6 +1255,39 @@ body {
         min-width: 150px; /* Smaller minimum width for mobile */
         font-size: var(--font-size-4xl);
     }
+
+    .hero-visual {
+        height: 300px; /* Reduced height for mobile */
+        margin-top: var(--spacing-8);
+    }
+
+    .floating-card {
+        min-width: 60px;
+        max-width: 80px;
+        padding: var(--spacing-2);
+    }
+
+    .floating-card i {
+        font-size: var(--font-size-base);
+    }
+
+    .floating-card span {
+        font-size: var(--font-size-xs);
+    }
+
+    /* Mobile card positioning adjustments */
+    .card-1 { top: 5%; left: 5%; }
+    .card-2 { top: 5%; right: 5%; }
+    .card-3 { top: 30%; right: 5%; }
+    .card-4 { bottom: 30%; left: 5%; }
+    .card-5 { bottom: 5%; right: 10%; }
+    .card-6 { top: 15%; left: 20%; }
+    .card-7 { top: 45%; right: 25%; }
+    .card-8 { bottom: 15%; right: 20%; }
+    .card-9 { top: 10%; left: 40%; }
+    .card-10 { top: 55%; left: 35%; }
+    .card-11 { top: 40%; left: 5%; }
+    .card-12 { bottom: 40%; right: 5%; }
 
     .hero-buttons {
         flex-direction: column;

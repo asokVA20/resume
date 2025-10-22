@@ -223,12 +223,30 @@ function initFloatingElements() {
     const floatingCards = document.querySelectorAll('.floating-card');
     
     floatingCards.forEach((card, index) => {
-        // Add random movement
-        setInterval(() => {
-            const randomX = (Math.random() - 0.5) * 20;
-            const randomY = (Math.random() - 0.5) * 20;
-            card.style.transform = `translate(${randomX}px, ${randomY}px)`;
-        }, 3000 + index * 1000);
+        // Add random movement with different intervals for each card
+        const baseInterval = 3000 + index * 300; // Reduced stagger for more cards
+        const randomDelay = Math.random() * 1500; // Reduced random delay
+        
+        setTimeout(() => {
+            setInterval(() => {
+                const randomX = (Math.random() - 0.5) * 12; // Further reduced movement range
+                const randomY = (Math.random() - 0.5) * 12;
+                const randomRotation = (Math.random() - 0.5) * 8; // Reduced rotation
+                
+                card.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotation}deg)`;
+            }, baseInterval);
+        }, randomDelay);
+        
+        // Add hover effects
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'scale(1.1) rotate(5deg)';
+            card.style.zIndex = '10';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'scale(1) rotate(0deg)';
+            card.style.zIndex = '1';
+        });
     });
 }
 
