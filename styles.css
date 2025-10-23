@@ -1377,6 +1377,10 @@ body {
         text-align: center;
         padding: 0 var(--spacing-4);
         box-sizing: border-box;
+        white-space: normal;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
     }
 
     .rotating-title {
@@ -1390,6 +1394,11 @@ body {
         display: inline-block;
         text-align: center;
         box-sizing: border-box;
+        white-space: normal;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
@@ -1769,7 +1778,7 @@ body {
     /* Hero Section - Small Mobile */
     .hero-title {
         font-size: var(--font-size-3xl);
-        line-height: 1.1;
+        line-height: 1.2;
         margin-bottom: var(--spacing-3);
         word-wrap: break-word;
         overflow-wrap: break-word;
@@ -1779,6 +1788,10 @@ body {
         text-align: center;
         padding: 0 var(--spacing-3);
         box-sizing: border-box;
+        white-space: normal;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
     }
 
     .rotating-title {
@@ -1792,6 +1805,11 @@ body {
         display: inline-block;
         text-align: center;
         box-sizing: border-box;
+        white-space: normal;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
@@ -2091,7 +2109,7 @@ body {
 
     .hero-title {
         font-size: var(--font-size-2xl);
-        line-height: 1.1;
+        line-height: 1.2;
         word-wrap: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
@@ -2100,6 +2118,10 @@ body {
         text-align: center;
         padding: 0 var(--spacing-2);
         box-sizing: border-box;
+        white-space: normal;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
     }
 
     .rotating-title {
@@ -2113,6 +2135,11 @@ body {
         display: inline-block;
         text-align: center;
         box-sizing: border-box;
+        white-space: normal;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
@@ -2316,7 +2343,7 @@ body {
 @media (max-width: 320px) {
     .hero-title {
         font-size: var(--font-size-xl);
-        line-height: 1.1;
+        line-height: 1.2;
         max-width: 100vw;
         width: 100%;
         text-align: center;
@@ -2325,6 +2352,10 @@ body {
         word-wrap: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
+        white-space: normal;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
     }
 
     .rotating-title {
@@ -2338,6 +2369,11 @@ body {
         word-wrap: break-word;
         overflow-wrap: break-word;
         hyphens: auto;
+        white-space: normal;
+        word-break: break-word;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
