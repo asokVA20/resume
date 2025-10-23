@@ -680,6 +680,71 @@ body {
     background: var(--gray-50);
 }
 
+/* Experience Tabs */
+.experience-tabs {
+    margin-top: var(--spacing-12);
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-4);
+    margin-bottom: var(--spacing-8);
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    padding: var(--spacing-3) var(--spacing-6);
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    color: var(--gray-600);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-button:hover {
+    border-color: var(--primary-indigo);
+    color: var(--primary-indigo);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, var(--primary-indigo), var(--indigo-light));
+    border-color: var(--primary-indigo);
+    color: var(--white);
+    box-shadow: var(--shadow-lg);
+}
+
+.tab-button.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.tab-button.active:hover::before {
+    left: 100%;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.tab-content.active {
+    display: block;
+}
+
 .timeline {
     position: relative;
     max-width: 800px;
