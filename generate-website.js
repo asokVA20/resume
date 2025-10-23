@@ -3,7 +3,8 @@ const path = require('path');
 
 // Simple template engine
 function renderTemplate(template, data) {
-    return template.replace(/\{\{([^}]+)\}\}/g, (match, key) => {
+    // First process simple replacements
+    let result = template.replace(/\{\{([^}]+)\}\}/g, (match, key) => {
         const keys = key.trim().split('.');
         let value = data;
         
@@ -16,7 +17,19 @@ function renderTemplate(template, data) {
         }
         
         return value !== undefined ? value : match;
-    }).replace(/\{\{#([^}]+)\}\}([\s\S]*?)\{\{\/\1\}\}/g, (match, key, content) => {
+    });
+    
+    // Then process loops recursively
+    result = processLoops(result, data);
+    
+    // Finally process conditionals
+    result = processConditionals(result, data);
+    
+    return result;
+}
+
+function processLoops(template, data) {
+    return template.replace(/\{\{#([^}]+)\}\}([\s\S]*?)\{\{\/\1\}\}/g, (match, key, content) => {
         const keys = key.trim().split('.');
         let value = data;
         
@@ -31,12 +44,27 @@ function renderTemplate(template, data) {
         if (Array.isArray(value)) {
             return value.map(item => {
                 let itemContent = content;
+                
+                // Recursively process nested loops in the item context
+                itemContent = processLoops(itemContent, item);
+                
+                // Process conditionals in the item context
+                itemContent = processConditionals(itemContent, item);
+                
                 // Replace item properties
                 itemContent = itemContent.replace(/\{\{([^}]+)\}\}/g, (itemMatch, itemKey) => {
                     const itemKeys = itemKey.trim().split('.');
                     let itemValue = item;
                     
+                    // Handle {{.}} syntax for primitive array items
+                    if (itemKeys.length === 1 && itemKeys[0] === '') {
+                        return item;
+                    }
+                    
                     for (const k of itemKeys) {
+                        if (k === '' || k === '.') {
+                            return item;
+                        }
                         if (itemValue && typeof itemValue === 'object' && k in itemValue) {
                             itemValue = itemValue[k];
                         } else {
@@ -46,8 +74,32 @@ function renderTemplate(template, data) {
                     
                     return itemValue !== undefined ? itemValue : itemMatch;
                 });
+                
                 return itemContent;
             }).join('');
+        }
+        
+        return '';
+    });
+}
+
+function processConditionals(template, data) {
+    return template.replace(/\{\{#if\s+([^}]+)\}\}([\s\S]*?)(?:\{\{else\}\}([\s\S]*?))?\{\{\/if\}\}/g, (match, condition, ifContent, elseContent) => {
+        const keys = condition.trim().split('.');
+        let value = data;
+        
+        for (const k of keys) {
+            if (value && typeof value === 'object' && k in value) {
+                value = value[k];
+            } else {
+                return '';
+            }
+        }
+        
+        if (value && value !== '' && value !== null && value !== undefined) {
+            return ifContent;
+        } else if (elseContent) {
+            return elseContent;
         }
         
         return '';
