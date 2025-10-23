@@ -156,16 +156,14 @@
       "title": "Vivantes-Humanitas Web Application",
       "description": "Django-based web application for Vivantes Humanitas e.V., enabling efficient management of volunteer registrations and activity tracking.",
       "tags": ["Django", "Python", "HTML", "CSS"],
-      "detailsUrl": "#vivantes-humanitas-project",
-      "onclick": "switchToTab('freelance')"
+      "liveUrl": "https://www.vivantes-humanitas.org/"
     },
     {
       "icon": "fas fa-building",
       "title": "Pentak Sarl International Website",
       "description": "Professional business website for Pentak Sarl International, featuring modern design, responsive layout, and comprehensive company information.",
       "tags": ["Laravel", "HTML", "CSS", "JavaScript"],
-      "detailsUrl": "#pentak-sarl-project",
-      "onclick": "switchToTab('freelance')"
+      "liveUrl": "https://pentak-global.com/"
     },
     {
       "icon": "fas fa-brain",
