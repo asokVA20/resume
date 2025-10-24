@@ -5,15 +5,9 @@
   "main": "generate-website.js",
   "scripts": {
     "generate": "node generate-website.js",
-    "generate-cv": "node generate-cv-pdf.js",
-    "generate-cv-enhanced": "node generate-cv-pdf-enhanced.js",
-    "generate-cv-simple": "node generate-cv-pdf-simple.js",
-    "generate-cv-fixed": "node generate-cv-pdf-fixed.js",
-    "generate-cv-proper": "node generate-cv-pdf-proper.js",
-    "generate-cv-fixed-proper": "node generate-cv-pdf-fixed-proper.js",
-    "generate-cv-latex": "node generate-cv-pdf-latex-style.js",
+    "generate-cv": "node generate-cv-jasperreports.js",
+    "setup-jasperreports": "bash setup-jasperreports.sh",
     "generate-all": "node generate-all.js",
-    "test-cv": "node test-cv-generators.js",
     "install-deps": "npm install"
   },
   "keywords": [

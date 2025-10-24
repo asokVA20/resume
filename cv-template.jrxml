@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports 
+              http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" 
+              name="cv-template" 
+              pageWidth="595" 
+              pageHeight="842" 
+              columnWidth="555" 
+              leftMargin="20" 
+              rightMargin="20" 
+              topMargin="20" 
+              bottomMargin="20"
+              isTitleNewPage="false"
+              isSummaryNewPage="false">
+    
+    <!-- Styles -->
+    <style name="title" fontName="Arial" fontSize="24" isBold="true" pdfFontName="Helvetica-Bold" forecolor="#4F46E5"/>
+    <style name="subtitle" fontName="Arial" fontSize="14" isBold="true" pdfFontName="Helvetica-Bold" forecolor="#6B7280"/>
+    <style name="heading" fontName="Arial" fontSize="16" isBold="true" pdfFontName="Helvetica-Bold" forecolor="#4F46E5"/>
+    <style name="subheading" fontName="Arial" fontSize="14" isBold="true" pdfFontName="Helvetica-Bold" forecolor="#F59E0B"/>
+    <style name="body" fontName="Arial" fontSize="11" pdfFontName="Helvetica" forecolor="#1F2937"/>
+    <style name="small" fontName="Arial" fontSize="9" pdfFontName="Helvetica" forecolor="#6B7280"/>
+    <style name="section" fontName="Arial" fontSize="16" isBold="true" pdfFontName="Helvetica-Bold" forecolor="#4F46E5"/>
+    
+    <!-- Parameters -->
+    <parameter name="personalInfo" class="java.util.Map"/>
+    <parameter name="contactInfo" class="java.util.List"/>
+    <parameter name="experienceTabs" class="java.util.List"/>
+    <parameter name="education" class="java.util.List"/>
+    <parameter name="skills" class="java.util.List"/>
+    <parameter name="projects" class="java.util.List"/>
+    
+    <!-- Title Section -->
+    <title>
+        <band height="100">
+            <!-- Name -->
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement x="0" y="0" width="555" height="30" style="title"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="24" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{personalInfo}.get("name")]]></textFieldExpression>
+            </textField>
+            
+            <!-- Title -->
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement x="0" y="35" width="555" height="20" style="subtitle"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="14" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{personalInfo}.get("title")]]></textFieldExpression>
+            </textField>
+            
+            <!-- Contact Information -->
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement x="0" y="60" width="555" height="15" style="small"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA["📧 asok.va20@gmail.com | 📞 +49 176 77016856 | 📍 Halle (Saale), Germany"]]></textFieldExpression>
+            </textField>
+            
+            <!-- Separator Line -->
+            <line>
+                <reportElement x="0" y="80" width="555" height="1"/>
+                <graphicElement>
+                    <pen lineWidth="0.5" lineColor="#6B7280"/>
+                </graphicElement>
+            </line>
+        </band>
+    </title>
+    
+    <!-- Professional Summary -->
+    <summary>
+        <band height="120">
+            <!-- Section Header -->
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement x="0" y="0" width="555" height="20" style="section"/>
+                <textElement>
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Professional Summary"]]></textFieldExpression>
+            </textField>
+            
+            <!-- Underline -->
+            <line>
+                <reportElement x="0" y="18" width="555" height="2"/>
+                <graphicElement>
+                    <pen lineWidth="2" lineColor="#4F46E5"/>
+                </graphicElement>
+            </line>
+            
+            <!-- Description -->
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement x="0" y="30" width="555" height="80" style="body"/>
+                <textElement>
+                    <font size="11"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{personalInfo}.get("description")]]></textFieldExpression>
+            </textField>
+        </band>
+    </summary>
+    
+    <!-- Experience Section -->
+    <detail>
+        <band height="200">
+            <!-- Section Header -->
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement x="0" y="0" width="555" height="20" style="section"/>
+                <textElement>
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Professional Experience"]]></textFieldExpression>
+            </textField>
+            
+            <!-- Underline -->
+            <line>
+                <reportElement x="0" y="18" width="555" height="2"/>
+                <graphicElement>
+                    <pen lineWidth="2" lineColor="#4F46E5"/>
+                </graphicElement>
+            </line>
+            
+            <!-- Experience Content -->
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true">
+                <reportElement x="0" y="30" width="555" height="150" style="body"/>
+                <textElement>
+                    <font size="11"/>
+                </textElement>
+                <textFieldExpression><![CDATA["IT Consultant - Vehicle technology and planning\nDB Regio AG Südost | August 2023 - Present\n\n• Developed automation solutions using Python and UiPath, streamlining data evaluation and visualization processes, resulting in a 80% reduction in manual effort.\n• Built and deployed RPA robots using UiPath Orchestrator, enabling seamless task automation and improving team productivity.\n• Collaborated with cross-functional teams to design and implement robust software solutions, improving system efficiency and client satisfaction.\n• Utilized Agile (SCRUM) to manage and deliver projects on time, ensuring continuous improvement and client alignment throughout the process.\n• Employed version control with Git and GitLab, ensuring smooth collaboration and code integrity.\n• Leveraged VBA (Visual Basic for Applications) to automate complex and time-consuming Excel processes, significantly improving efficiency and accuracy."]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    
+</jasperReport>
