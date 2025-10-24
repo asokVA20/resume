@@ -50,7 +50,7 @@ class MarkdownCVGenerator {
 
 ${personalInfo.description}
 
-
+---
 `;
     }
 
@@ -59,33 +59,34 @@ ${personalInfo.description}
         const socialLinks = this.data.socialLinks || [];
         
         let contactSection = '## Contact Information\n\n';
+        contactSection += '| Field | Information |\n';
+        contactSection += '|-------|-------------|\n';
         
         // Email
         const email = contact.find(item => item.title === 'Email');
         if (email) {
-            contactSection += `**Email:** ${email.content}\n\n`;
+            contactSection += `| Email | ${email.content} |\n`;
         }
         
         // Phone
         const phone = contact.find(item => item.title === 'Phone');
         if (phone) {
-            contactSection += `**Phone:** ${phone.content}\n\n`;
+            contactSection += `| Phone | ${phone.content} |\n`;
         }
         
         // Location
         const location = contact.find(item => item.title === 'Location');
         if (location) {
-            contactSection += `**Location:** ${location.content}\n\n`;
+            contactSection += `| Location | ${location.content} |\n`;
         }
         
         // Social Links
         if (socialLinks.length > 0) {
-            contactSection += '**Social Links:** ';
-            const socialText = socialLinks.map(link => `[${link.name}](${link.url})`).join(' | ');
-            contactSection += socialText + '\n\n';
+            const socialText = socialLinks.map(link => `[${link.name}](${link.url})`).join(', ');
+            contactSection += `| Social Links | ${socialText} |\n`;
         }
         
-        contactSection += '\n\n';
+        contactSection += '\n---\n\n';
         return contactSection;
     }
 
@@ -111,8 +112,10 @@ ${personalInfo.description}
         // Add expertise items
         if (about.expertiseItems && about.expertiseItems.length > 0) {
             summary += '### Core Expertise\n\n';
+            summary += '| Expertise Area |\n';
+            summary += '|----------------|\n';
             about.expertiseItems.forEach(item => {
-                summary += `- **${item.title}**\n`;
+                summary += `| **${item.title}** |\n`;
             });
             summary += '\n';
         }
@@ -120,13 +123,15 @@ ${personalInfo.description}
         // Add stats if available
         if (about.stats && about.stats.length > 0) {
             summary += '### Key Statistics\n\n';
+            summary += '| Metric | Value |\n';
+            summary += '|--------|-------|\n';
             about.stats.forEach(stat => {
-                summary += `- **${stat.label}:** ${stat.number}\n`;
+                summary += `| **${stat.label}** | ${stat.number} |\n`;
             });
             summary += '\n';
         }
         
-        summary += '\n\n';
+        summary += '---\n\n';
         return summary;
     }
 
@@ -149,11 +154,11 @@ ${personalInfo.description}
             }
             
             if (index < this.data.projects.length - 1) {
-                projects += '\n\n';
+                projects += '---\n\n';
             }
         });
         
-        projects += '\n\n';
+        projects += '---\n\n';
         return projects;
     }
 
@@ -176,7 +181,7 @@ ${personalInfo.description}
             }
         });
         
-        experience += '\n\n';
+        experience += '---\n\n';
         return experience;
     }
 
@@ -205,7 +210,7 @@ ${personalInfo.description}
         }
         
         if (!isLast) {
-            itemText += '\n\n';
+            itemText += '---\n\n';
         }
         
         return itemText;
@@ -235,11 +240,11 @@ ${personalInfo.description}
             }
             
             if (index < this.data.education.length - 1) {
-                education += '\n\n';
+                education += '---\n\n';
             }
         });
         
-        education += '\n\n';
+        education += '---\n\n';
         return education;
     }
 
@@ -254,16 +259,18 @@ ${personalInfo.description}
             skills += `### ${skillCategory.category || 'Category'}\n\n`;
             
             if (skillCategory.items && skillCategory.items.length > 0) {
+                skills += '| Skill | Level |\n';
+                skills += '|-------|-------|\n';
                 skillCategory.items.forEach((skill, skillIndex) => {
-                    const level = skill.level ? ` (${skill.level}%)` : '';
-                    skills += `- **${skill.name || 'Skill'}**${level}\n`;
+                    const level = skill.level ? `${skill.level}%` : 'N/A';
+                    skills += `| **${skill.name || 'Skill'}** | ${level} |\n`;
                 });
             }
             
             skills += '\n';
         });
         
-        skills += '\n\n';
+        skills += '---\n\n';
         return skills;
     }
 
