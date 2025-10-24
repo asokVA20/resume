@@ -2,7 +2,7 @@
 
 A professional resume website generator using modern web technologies. Create a stunning, responsive resume website from your personal data.
 
-## 🎯 **Features**
+## **Features**
 
 ### **Website Generation**
 - ✅ **Template-based** - Easy to customize with your data
@@ -14,7 +14,7 @@ A professional resume website generator using modern web technologies. Create a 
 - ✅ **Interactive sections** - Hover effects, smooth scrolling
 - ✅ **Contact form** - Working contact functionality
 
-## 🚀 **Quick Start**
+## **Quick Start**
 
 ### **1. Generate Website**
 ```bash
@@ -31,7 +31,7 @@ npm run generate-cv
 npm run generate-all
 ```
 
-## 📋 **Available Commands**
+## **Available Commands**
 
 | Command | Description |
 |---------|-------------|
@@ -40,7 +40,7 @@ npm run generate-all
 | `npm run generate-all` | Generate both website and CV |
 | `npm run install-deps` | Install dependencies |
 
-## 📝 **Markdown CV Features**
+## **Markdown CV Features**
 
 ### **Clean & Professional:**
 - **GitHub/GitLab compatible** - Perfect for online portfolios
@@ -58,7 +58,7 @@ npm run generate-all
 - **Skills** - Technical skills by category
 - **Projects** - Featured project showcase
 
-## 🎨 **Website Features**
+## **Website Features**
 
 ### **Professional Design:**
 - **Modern layout** - Clean, professional appearance
@@ -84,7 +84,7 @@ npm run generate-all
 - **Smooth scrolling** - Navigation between sections
 - **Tab switching** - Experience section navigation
 
-## 📁 **Project Structure**
+## **Project Structure**
 
 ```
 resume/
@@ -97,7 +97,7 @@ resume/
 └── package.json          # Project configuration
 ```
 
-## 🎨 **Customization**
+## **Customization**
 
 ### **Personal Data (`personal-data.json`)**
 - **Personal Info** - Name, title, description
@@ -143,3 +143,4 @@ resume/
 
 
 **Ready to create your professional resume website? Run `npm run generate` and get started! 🚀**
+
