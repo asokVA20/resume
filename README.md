@@ -115,26 +115,13 @@ resume/
 - **Easy customization** - Modify template or data
 - **Reusable** - Use with different personal data
 
-## 🚀 **Deployment**
-
-### **Static Hosting**
-- **Render.com** - Recommended hosting platform
-- **GitHub Pages** - Free static hosting
-- **Netlify** - Easy deployment with forms
-- **Vercel** - Fast global CDN
-
-### **Domain Setup**
-- **Custom domain** - Point to your hosting
-- **SSL certificate** - Automatic HTTPS
-- **CDN** - Global content delivery
-
-## 🛠 **Technical Requirements**
+## **Technical Requirements**
 
 - **Node.js** - Version 14.0.0 or higher
 - **Modern browser** - For viewing the website
 - **Text editor** - For customizing content
 
-## 📈 **Benefits**
+## **Benefits**
 
 - **Professional appearance** - Stand out to recruiters
 - **Mobile-friendly** - Works on all devices
@@ -144,7 +131,7 @@ resume/
 - **Template-based** - Reusable for different people
 - **No complex setup** - Simple Node.js script
 
-## 🎯 **Perfect For**
+## **Perfect For**
 
 - **Job seekers** - Professional online presence
 - **Freelancers** - Client portfolio showcase
@@ -153,5 +140,6 @@ resume/
 - **Anyone** - Personal branding and networking
 
 ---
+
 
 **Ready to create your professional resume website? Run `npm run generate` and get started! 🚀**
