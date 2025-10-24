@@ -1,0 +1,30 @@
+{
+  "name": "resume-website-generator",
+  "version": "1.0.0",
+  "description": "A template-based resume website generator with PDF CV export",
+  "main": "generate-website.js",
+  "scripts": {
+    "generate": "node generate-website.js",
+    "generate-cv": "node generate-cv-pdf.js",
+    "generate-cv-enhanced": "node generate-cv-pdf-enhanced.js",
+    "generate-all": "node generate-all.js",
+    "install-deps": "npm install"
+  },
+  "keywords": [
+    "resume",
+    "cv",
+    "website",
+    "template",
+    "pdf",
+    "generator"
+  ],
+  "author": "Anthony Okala",
+  "license": "MIT",
+  "dependencies": {
+    "pdfkit": "^0.14.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
