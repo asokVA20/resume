@@ -263,50 +263,92 @@ class SimpleCVGenerator {
 
     convertHTMLToPDF() {
         return new Promise((resolve, reject) => {
+            console.log('🔧 Converting HTML to PDF...');
+            
             // Try different approaches to convert HTML to PDF
             const approaches = [
                 // Approach 1: Using wkhtmltopdf if available
                 () => {
+                    console.log('Trying wkhtmltopdf...');
                     const command = `wkhtmltopdf --page-size A4 --margin-top 20mm --margin-bottom 20mm --margin-left 20mm --margin-right 20mm cv-temp.html ${this.outputFile}`;
                     exec(command, (error, stdout, stderr) => {
-                        if (!error) {
+                        if (!error && fs.existsSync(this.outputFile)) {
+                            console.log('✅ PDF generated with wkhtmltopdf');
                             resolve();
                         } else {
+                            console.log('❌ wkhtmltopdf not available');
                             throw new Error('wkhtmltopdf not available');
                         }
                     });
                 },
                 // Approach 2: Using Chrome/Chromium headless
                 () => {
+                    console.log('Trying Chrome headless...');
                     const command = `google-chrome --headless --disable-gpu --print-to-pdf=${this.outputFile} cv-temp.html`;
                     exec(command, (error, stdout, stderr) => {
-                        if (!error) {
+                        if (!error && fs.existsSync(this.outputFile)) {
+                            console.log('✅ PDF generated with Chrome');
                             resolve();
                         } else {
+                            console.log('❌ Chrome not available');
                             throw new Error('Chrome not available');
                         }
                     });
                 },
                 // Approach 3: Using Edge headless
                 () => {
+                    console.log('Trying Edge headless...');
                     const command = `msedge --headless --disable-gpu --print-to-pdf=${this.outputFile} cv-temp.html`;
                     exec(command, (error, stdout, stderr) => {
-                        if (!error) {
+                        if (!error && fs.existsSync(this.outputFile)) {
+                            console.log('✅ PDF generated with Edge');
                             resolve();
                         } else {
+                            console.log('❌ Edge not available');
                             throw new Error('Edge not available');
+                        }
+                    });
+                },
+                // Approach 4: Using Chrome on Windows
+                () => {
+                    console.log('Trying Chrome on Windows...');
+                    const command = `"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" --headless --disable-gpu --print-to-pdf=${this.outputFile} cv-temp.html`;
+                    exec(command, (error, stdout, stderr) => {
+                        if (!error && fs.existsSync(this.outputFile)) {
+                            console.log('✅ PDF generated with Chrome (Windows)');
+                            resolve();
+                        } else {
+                            console.log('❌ Chrome (Windows) not available');
+                            throw new Error('Chrome (Windows) not available');
+                        }
+                    });
+                },
+                // Approach 5: Using Edge on Windows
+                () => {
+                    console.log('Trying Edge on Windows...');
+                    const command = `"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe" --headless --disable-gpu --print-to-pdf=${this.outputFile} cv-temp.html`;
+                    exec(command, (error, stdout, stderr) => {
+                        if (!error && fs.existsSync(this.outputFile)) {
+                            console.log('✅ PDF generated with Edge (Windows)');
+                            resolve();
+                        } else {
+                            console.log('❌ Edge (Windows) not available');
+                            throw new Error('Edge (Windows) not available');
                         }
                     });
                 }
             ];
 
-            // Try each approach
+            // Try each approach sequentially
             let currentApproach = 0;
             const tryNext = () => {
                 if (currentApproach >= approaches.length) {
                     // If no approach works, just copy the HTML file
                     console.log('⚠️  No PDF converter found. Saving as HTML file instead.');
-                    fs.copyFileSync('cv-temp.html', 'cv-anthony-okala.html');
+                    const htmlOutput = 'cv-anthony-okala.html';
+                    fs.copyFileSync('cv-temp.html', htmlOutput);
+                    console.log(`📄 HTML CV saved as: ${htmlOutput}`);
+                    console.log('💡 You can open this file in your browser and print to PDF manually.');
                     resolve();
                     return;
                 }
@@ -315,7 +357,7 @@ class SimpleCVGenerator {
                     approaches[currentApproach]();
                 } catch (error) {
                     currentApproach++;
-                    tryNext();
+                    setTimeout(tryNext, 1000); // Wait 1 second before trying next approach
                 }
             };
 

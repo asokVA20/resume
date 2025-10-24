@@ -47,6 +47,20 @@ npm run generate-all
 
 ## 🎨 **CV Generation Features**
 
+### ✅ **Working PDF Generator** (`generate-cv-pdf-working.js`)
+- **Uses PDFKit**: Native Node.js PDF generation
+- **No external dependencies**: Works on any system with Node.js
+- **Professional layout**: Clean, ATS-friendly design
+- **No overlapping text**: Proper spacing and typography
+- **Complete sections**: All your data included
+- **Output**: `cv-anthony-okala-working.pdf`
+
+### 🔧 **Alternative HTML-to-PDF** (`generate-cv-simple.js`)
+- **Fallback option**: If PDFKit doesn't work
+- **HTML generation**: Creates `cv-anthony-okala.html`
+- **Manual conversion**: Open in browser and print to PDF
+- **Cross-platform**: Works on any system
+
 ### **Simple & Reliable Approach:**
 - **HTML-based generation** - No complex dependencies
 - **Professional layout** - Clean, readable format

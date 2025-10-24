@@ -1,5 +1,5 @@
 const fs = require('fs');
-const { generateSimpleCV } = require('./generate-cv-simple.js');
+const { generateWorkingCVPDF } = require('./generate-cv-pdf-working.js');
 
 // Main generator script
 async function generateAll() {
@@ -18,14 +18,14 @@ async function generateAll() {
             console.log('✅ Website generated successfully!');
         });
         
-        // 2. Generate professional CV
-        console.log('📋 Generating professional CV...');
-        await generateSimpleCV();
+            // 2. Generate professional CV
+            console.log('📋 Generating professional CV...');
+            await generateWorkingCVPDF();
         
         console.log('\n🎉 All files generated successfully!');
         console.log('\n📁 Generated files:');
         console.log('   - index.html (Website)');
-        console.log('   - cv-anthony-okala-simple.pdf (Professional CV)');
+        console.log('   - cv-anthony-okala-working.pdf (Professional CV)');
         console.log('\n🎨 Features:');
         console.log('   - Professional layout with no overlapping text');
         console.log('   - Clean, readable format');
