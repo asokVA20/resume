@@ -5,6 +5,8 @@
   "main": "generate-website.js",
   "scripts": {
     "generate": "node generate-website.js",
+    "generate-cv": "node generate-cv-md.js",
+    "generate-all": "node generate-all.js",
     "install-deps": "npm install"
   },
   "keywords": [

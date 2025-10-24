@@ -21,12 +21,42 @@ A professional resume website generator using modern web technologies. Create a 
 npm run generate
 ```
 
+### **2. Generate Markdown CV**
+```bash
+npm run generate-cv
+```
+
+### **3. Generate Everything**
+```bash
+npm run generate-all
+```
+
 ## 📋 **Available Commands**
 
 | Command | Description |
 |---------|-------------|
 | `npm run generate` | Generate resume website from template |
+| `npm run generate-cv` | Generate Markdown CV |
+| `npm run generate-all` | Generate both website and CV |
 | `npm run install-deps` | Install dependencies |
+
+## 📝 **Markdown CV Features**
+
+### **Clean & Professional:**
+- **GitHub/GitLab compatible** - Perfect for online portfolios
+- **Easy to edit** - Simple Markdown format
+- **Professional structure** - All sections included
+- **Readable format** - Clean, organized layout
+- **Version control friendly** - Track changes easily
+- **Cross-platform** - Works on any system
+
+### **Sections Included:**
+- **Contact Information** - Email, phone, location, social links
+- **Professional Summary** - Key statistics and expertise
+- **Experience** - Work, freelance, and academic experience
+- **Education** - Academic background and achievements
+- **Skills** - Technical skills by category
+- **Projects** - Featured project showcase
 
 ## 🎨 **Website Features**
 
