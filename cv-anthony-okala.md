@@ -11,7 +11,7 @@ With over 10 years of expertise in automation, software development, machine lea
 | Field | Information |
 |-------|-------------|
 | Email | asok.va20@gmail.com |
-| Phone | +49 176 77016856 | +49 1520 3593729 |
+| Phone | +49 176 77016856 |
 | Location | Zapfenweg 18, 60120 Halle (Saale), Saxony-Anhalt, Germany |
 | Social Links | [LinkedIn](https://www.linkedin.com/in/anthony-okala-b87a98190/), [GitHub](https://github.com/asokVA20), [GitLab](https://gitlab.com/asok.va20) |
 
