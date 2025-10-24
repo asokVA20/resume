@@ -1,6 +1,6 @@
-# Resume Website & CV Generator
+# Resume Website Generator
 
-A professional resume website and CV generator using modern web technologies and HTML-to-PDF conversion for clean, readable CV generation.
+A professional resume website generator using modern web technologies. Create a stunning, responsive resume website from your personal data.
 
 ## 🎯 **Features**
 
@@ -10,14 +10,9 @@ A professional resume website and CV generator using modern web technologies and
 - ✅ **Modern UI/UX** - Professional animations and effects
 - ✅ **SEO optimized** - Search engine friendly
 - ✅ **Fast loading** - Optimized performance
-
-### **CV Generation**
-- ✅ **Professional layout** - No overlapping text issues
-- ✅ **Clean, readable format** - Professional appearance
-- ✅ **HTML-based generation** - Reliable and consistent
-- ✅ **Data-driven content** - Dynamic from JSON data
-- ✅ **High-quality output** - Professional document standards
-- ✅ **Multiple export options** - PDF or HTML format
+- ✅ **Professional animations** - Typewriter effects, floating cards, scroll animations
+- ✅ **Interactive sections** - Hover effects, smooth scrolling
+- ✅ **Contact form** - Working contact functionality
 
 ## 🚀 **Quick Start**
 
@@ -26,144 +21,107 @@ A professional resume website and CV generator using modern web technologies and
 npm run generate
 ```
 
-### **2. Generate Professional CV**
-```bash
-npm run generate-cv
-```
-
-### **3. Generate Everything**
-```bash
-npm run generate-all
-```
-
 ## 📋 **Available Commands**
 
 | Command | Description |
 |---------|-------------|
 | `npm run generate` | Generate resume website from template |
-| `npm run generate-cv` | Generate professional CV |
-| `npm run generate-all` | Generate both website and CV |
 | `npm run install-deps` | Install dependencies |
 
-## 🎨 **CV Generation Features**
+## 🎨 **Website Features**
 
-### ✅ **Working PDF Generator** (`generate-cv-pdf-working.js`)
-- **Uses PDFKit**: Native Node.js PDF generation
-- **No external dependencies**: Works on any system with Node.js
-- **Professional layout**: Clean, ATS-friendly design
-- **No overlapping text**: Proper spacing and typography
-- **Complete sections**: All your data included
-- **Output**: `cv-anthony-okala-working.pdf`
+### **Professional Design:**
+- **Modern layout** - Clean, professional appearance
+- **Responsive design** - Works on desktop, tablet, and mobile
+- **Brand colors** - Indigo, yellow, and red color scheme
+- **Typography** - Professional font choices and hierarchy
+- **Animations** - Subtle and professional effects
 
-### 🔧 **Alternative HTML-to-PDF** (`generate-cv-simple.js`)
-- **Fallback option**: If PDFKit doesn't work
-- **HTML generation**: Creates `cv-anthony-okala.html`
-- **Manual conversion**: Open in browser and print to PDF
-- **Cross-platform**: Works on any system
+### **Sections Included:**
+- **Hero Section** - Name, title, rotating typewriter effect
+- **About Me** - Professional summary with stats
+- **Featured Projects** - Highlighted project showcase
+- **Professional Experience** - Tabbed interface (Freelance, Work, School)
+- **Skills** - Categorized technical skills
+- **Education** - Academic background
+- **Contact** - Contact form and social links
 
-### **Simple & Reliable Approach:**
-- **HTML-based generation** - No complex dependencies
-- **Professional layout** - Clean, readable format
-- **No overlapping text** - Proper spacing and layout
-- **Data-driven content** - Dynamic from JSON
-- **Multiple export options** - PDF or HTML
-- **Cross-platform** - Works on any system
-
-### **Generated CV Includes:**
-- ✅ **Professional Summary** - Generated from your data
-- ✅ **Work Experience** - All professional positions
-- ✅ **Education** - Complete academic background
-- ✅ **Technical Skills** - Categorized competencies
-- ✅ **Featured Projects** - Key work examples
-- ✅ **Contact Information** - All contact details
+### **Interactive Elements:**
+- **Typewriter animation** - Rotating professional titles
+- **Floating cards** - Animated background elements
+- **Scroll effects** - Elements animate on scroll
+- **Hover effects** - Interactive project cards
+- **Smooth scrolling** - Navigation between sections
+- **Tab switching** - Experience section navigation
 
 ## 📁 **Project Structure**
 
 ```
 resume/
-├── template.html              # Website template
-├── personal-data.json         # Your personal data
-├── generate-website.js        # Website generator
-├── generate-cv-simple.js      # CV generator
-├── generate-all.js            # Combined generator
-├── styles.css                 # Website styles
-├── script.js                  # Website scripts
-└── README.md                  # Documentation
+├── template.html          # HTML template with placeholders
+├── personal-data.json     # Your personal data in JSON format
+├── generate-website.js    # Template engine script
+├── styles.css            # Website styling
+├── script.js             # Website functionality
+├── index.html            # Generated website
+└── package.json          # Project configuration
 ```
 
-## 🔧 **Customization**
+## 🎨 **Customization**
 
-### **Website Customization:**
-1. Edit `personal-data.json` with your information
-2. Modify `template.html` for layout changes
-3. Update `styles.css` for styling
-4. Run `npm run generate`
+### **Personal Data (`personal-data.json`)**
+- **Personal Info** - Name, title, description
+- **Contact Info** - Email, phone, location
+- **Social Links** - LinkedIn, GitHub, etc.
+- **About Section** - Professional summary and stats
+- **Experience** - Work, freelance, and academic experience
+- **Skills** - Technical skills by category
+- **Education** - Academic background
+- **Projects** - Featured project showcase
 
-### **CV Customization:**
-1. Edit `generate-cv-simple.js` for layout changes
-2. Modify the HTML template in the generator
-3. Update styles and colors
-4. Run `npm run generate-cv`
-
-## 📊 **Data Structure**
-
-Your `personal-data.json` should include:
-- `personalInfo` - Name, title, description
-- `contactInfo` - Email, phone, location
-- `experienceTabs` - Work, freelance, academic experience
-- `education` - Academic background
-- `skills` - Technical competencies
-- `projects` - Featured work examples
-
-## 🎯 **Output Files**
-
-After generation, you'll get:
-- `index.html` - Your resume website
-- `cv-anthony-okala-simple.pdf` - Professional CV (if PDF converter available)
-- `cv-anthony-okala.html` - CV in HTML format (fallback)
-- `styles.css` - Website styles
-- `script.js` - Website scripts
+### **Template System**
+- **Mustache-style placeholders** - `{{variable}}` syntax
+- **Dynamic content** - All data from JSON file
+- **Easy customization** - Modify template or data
+- **Reusable** - Use with different personal data
 
 ## 🚀 **Deployment**
 
-### **Website Deployment:**
-- Upload `index.html`, `styles.css`, and `script.js` to your web server
-- Or use services like Netlify, Vercel, or GitHub Pages
+### **Static Hosting**
+- **Render.com** - Recommended hosting platform
+- **GitHub Pages** - Free static hosting
+- **Netlify** - Easy deployment with forms
+- **Vercel** - Fast global CDN
 
-### **CV Usage:**
-- Use the generated PDF for job applications
-- Share the HTML version via email or LinkedIn
-- Print for in-person interviews
+### **Domain Setup**
+- **Custom domain** - Point to your hosting
+- **SSL certificate** - Automatic HTTPS
+- **CDN** - Global content delivery
 
-## 🔧 **Technical Requirements**
+## 🛠 **Technical Requirements**
 
-- **Node.js** 14.0.0 or higher
-- **Modern web browser** (for website)
-- **PDF converter** (optional - wkhtmltopdf, Chrome, or Edge for PDF output)
+- **Node.js** - Version 14.0.0 or higher
+- **Modern browser** - For viewing the website
+- **Text editor** - For customizing content
 
 ## 📈 **Benefits**
 
-### **Website Benefits:**
-- **Professional online presence**
-- **Easy to share and update**
-- **Mobile-friendly design**
-- **SEO optimized**
+- **Professional appearance** - Stand out to recruiters
+- **Mobile-friendly** - Works on all devices
+- **Fast loading** - Optimized performance
+- **SEO optimized** - Better search visibility
+- **Easy to update** - Modify JSON data and regenerate
+- **Template-based** - Reusable for different people
+- **No complex setup** - Simple Node.js script
 
-### **CV Benefits:**
-- **No overlapping text issues**
-- **Professional layout**
-- **Clean, readable format**
-- **HTML-based generation**
-- **Data-driven content**
-- **Multiple export options**
+## 🎯 **Perfect For**
 
-## 🎉 **Success!**
+- **Job seekers** - Professional online presence
+- **Freelancers** - Client portfolio showcase
+- **Students** - Academic project presentation
+- **Professionals** - Career advancement
+- **Anyone** - Personal branding and networking
 
-This solution provides:
-- ✅ **Professional website** - Modern, responsive design
-- ✅ **Clean CV generation** - No overlapping text issues
-- ✅ **Template-based** - Easy to customize
-- ✅ **Data-driven** - Dynamic content generation
-- ✅ **Reliable output** - Professional standards
+---
 
-**Ready to generate your professional resume website and CV!** 🚀
+**Ready to create your professional resume website? Run `npm run generate` and get started! 🚀**
