@@ -8,28 +8,29 @@ class MarkdownCVGenerator {
 
     generate() {
         try {
-            console.log('📝 Generating Markdown CV...');
+            console.log('📝 Generating Professional Markdown CV...');
             
             let markdown = this.createHeader();
             markdown += this.createContactInfo();
             markdown += this.createProfessionalSummary();
+            markdown += this.createFeaturedProjects();
             markdown += this.createExperience();
-            markdown += this.createEducation();
             markdown += this.createSkills();
-            markdown += this.createProjects();
+            markdown += this.createEducation();
             markdown += this.createFooter();
             
             // Write to file
             fs.writeFileSync(this.outputFile, markdown, 'utf8');
             
-            console.log('✅ Markdown CV generated successfully!');
+            console.log('✅ Professional Markdown CV generated successfully!');
             console.log(`📄 Output file: ${this.outputFile}`);
             console.log('🎨 Features:');
-            console.log('   - Clean, readable format');
-            console.log('   - Professional structure');
-            console.log('   - All sections included');
+            console.log('   - Professional CV design best practices');
+            console.log('   - Complete data from personal-data.json');
+            console.log('   - Template structure matching HTML');
             console.log('   - GitHub/GitLab compatible');
-            console.log('   - Easy to edit and maintain');
+            console.log('   - ATS-friendly format');
+            console.log('   - Clean, readable layout');
             
             return this.outputFile;
             
@@ -43,10 +44,11 @@ class MarkdownCVGenerator {
         const personalInfo = this.data.personalInfo;
         
         return `# ${personalInfo.name}
-
 ## ${personalInfo.title}
 
-${personalInfo.description || ''}
+> ${personalInfo.subtitle}
+
+${personalInfo.description}
 
 ---
 `;
@@ -56,35 +58,34 @@ ${personalInfo.description || ''}
         const contact = this.data.contactInfo || [];
         const socialLinks = this.data.socialLinks || [];
         
-        let contactSection = '## 📞 Contact Information\n\n';
+        let contactSection = '## Contact Information\n\n';
         
         // Email
         const email = contact.find(item => item.title === 'Email');
         if (email) {
-            contactSection += `- **Email:** ${email.content}\n`;
+            contactSection += `**Email:** ${email.content}\n\n`;
         }
         
         // Phone
         const phone = contact.find(item => item.title === 'Phone');
         if (phone) {
-            contactSection += `- **Phone:** ${phone.content}\n`;
+            contactSection += `**Phone:** ${phone.content}\n\n`;
         }
         
         // Location
         const location = contact.find(item => item.title === 'Location');
         if (location) {
-            contactSection += `- **Location:** ${location.content}\n`;
+            contactSection += `**Location:** ${location.content}\n\n`;
         }
         
         // Social Links
         if (socialLinks.length > 0) {
-            contactSection += '\n### 🌐 Social Links\n\n';
-            socialLinks.forEach(link => {
-                contactSection += `- **${link.name}:** [${link.url}](${link.url})\n`;
-            });
+            contactSection += '**Social Links:** ';
+            const socialText = socialLinks.map(link => `[${link.name}](${link.url})`).join(' | ');
+            contactSection += socialText + '\n\n';
         }
         
-        contactSection += '\n---\n\n';
+        contactSection += '---\n\n';
         return contactSection;
     }
 
@@ -93,7 +94,11 @@ ${personalInfo.description || ''}
         
         if (!about) return '';
         
-        let summary = '## 👨‍💼 Professional Summary\n\n';
+        let summary = '## Professional Summary\n\n';
+        
+        if (about.journey) {
+            summary += `${about.journey}\n\n`;
+        }
         
         if (about.current) {
             summary += `${about.current}\n\n`;
@@ -103,11 +108,20 @@ ${personalInfo.description || ''}
             summary += `${about.expertise}\n\n`;
         }
         
+        // Add expertise items
+        if (about.expertiseItems && about.expertiseItems.length > 0) {
+            summary += '### Core Expertise\n\n';
+            about.expertiseItems.forEach(item => {
+                summary += `- **${item.title}**\n`;
+            });
+            summary += '\n';
+        }
+        
         // Add stats if available
         if (about.stats && about.stats.length > 0) {
-            summary += '### 📊 Key Statistics\n\n';
+            summary += '### Key Statistics\n\n';
             about.stats.forEach(stat => {
-                summary += `- **${stat.label}:** ${stat.value}\n`;
+                summary += `- **${stat.label}:** ${stat.number}\n`;
             });
             summary += '\n';
         }
@@ -116,8 +130,35 @@ ${personalInfo.description || ''}
         return summary;
     }
 
+    createFeaturedProjects() {
+        if (!this.data.projects || this.data.projects.length === 0) {
+            return '';
+        }
+        
+        let projects = '## Featured Projects\n\n';
+        
+        this.data.projects.forEach((project, index) => {
+            projects += `### ${project.title}\n\n`;
+            
+            if (project.description) {
+                projects += `${project.description}\n\n`;
+            }
+            
+            if (project.tags && project.tags.length > 0) {
+                projects += `**Technologies:** ${project.tags.join(', ')}\n\n`;
+            }
+            
+            if (index < this.data.projects.length - 1) {
+                projects += '---\n\n';
+            }
+        });
+        
+        projects += '---\n\n';
+        return projects;
+    }
+
     createExperience() {
-        let experience = '## 💼 Professional Experience\n\n';
+        let experience = '## Professional Experience\n\n';
         
         // Process experience in order of importance
         const experienceOrder = ['work', 'freelance', 'school'];
@@ -175,7 +216,7 @@ ${personalInfo.description || ''}
             return '';
         }
         
-        let education = '## 🎓 Education\n\n';
+        let education = '## Education\n\n';
         
         this.data.education.forEach((edu, index) => {
             education += `### ${edu.degree || 'Degree'}\n`;
@@ -207,7 +248,7 @@ ${personalInfo.description || ''}
             return '';
         }
         
-        let skills = '## 🛠️ Technical Skills\n\n';
+        let skills = '## Technical Skills\n\n';
         
         this.data.skills.forEach((skillCategory, categoryIndex) => {
             skills += `### ${skillCategory.category || 'Category'}\n\n`;
@@ -226,32 +267,6 @@ ${personalInfo.description || ''}
         return skills;
     }
 
-    createProjects() {
-        if (!this.data.projects || this.data.projects.length === 0) {
-            return '';
-        }
-        
-        let projects = '## 🚀 Featured Projects\n\n';
-        
-        this.data.projects.forEach((project, index) => {
-            projects += `### ${project.title || 'Project'}\n\n`;
-            
-            if (project.description) {
-                projects += `${project.description}\n\n`;
-            }
-            
-            if (project.tags && project.tags.length > 0) {
-                projects += `**Technologies:** ${project.tags.join(', ')}\n\n`;
-            }
-            
-            if (index < this.data.projects.length - 1) {
-                projects += '---\n\n';
-            }
-        });
-        
-        projects += '---\n\n';
-        return projects;
-    }
 
     createFooter() {
         const personalInfo = this.data.personalInfo;
@@ -266,6 +281,18 @@ ${personalInfo.description || ''}
 *This CV was generated on ${currentDate}*
 
 **${personalInfo.name}** - ${personalInfo.title}
+
+---
+
+## Download Options
+
+- **PDF Version:** Available upon request
+- **Markdown Version:** This document
+- **Website:** [Resume Website](https://resume.asok-se.com/okas)
+
+---
+
+*Powered by ASOK-SE SARL*
 `;
     }
 }
