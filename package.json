@@ -5,8 +5,7 @@
   "main": "generate-website.js",
   "scripts": {
     "generate": "node generate-website.js",
-    "generate-cv": "node generate-cv-jasperreports.js",
-    "setup-jasperreports": "bash setup-jasperreports.sh",
+    "generate-cv": "node generate-cv-simple.js",
     "generate-all": "node generate-all.js",
     "install-deps": "npm install"
   },

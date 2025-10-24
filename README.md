@@ -1,6 +1,6 @@
 # Resume Website & CV Generator
 
-A professional resume website and CV generator using modern web technologies and JasperReports for enterprise-grade PDF generation.
+A professional resume website and CV generator using modern web technologies and HTML-to-PDF conversion for clean, readable CV generation.
 
 ## 🎯 **Features**
 
@@ -11,32 +11,27 @@ A professional resume website and CV generator using modern web technologies and
 - ✅ **SEO optimized** - Search engine friendly
 - ✅ **Fast loading** - Optimized performance
 
-### **CV Generation with JasperReports**
+### **CV Generation**
 - ✅ **Professional layout** - No overlapping text issues
-- ✅ **Enterprise-grade** - Used by Fortune 500 companies
-- ✅ **Template-based design** - Visual designer support
+- ✅ **Clean, readable format** - Professional appearance
+- ✅ **HTML-based generation** - Reliable and consistent
 - ✅ **Data-driven content** - Dynamic from JSON data
 - ✅ **High-quality output** - Professional document standards
-- ✅ **Automatic page breaks** - Smart content flow
+- ✅ **Multiple export options** - PDF or HTML format
 
 ## 🚀 **Quick Start**
 
-### **1. Setup JasperReports (One-time)**
-```bash
-npm run setup-jasperreports
-```
-
-### **2. Generate Website**
+### **1. Generate Website**
 ```bash
 npm run generate
 ```
 
-### **3. Generate Professional CV**
+### **2. Generate Professional CV**
 ```bash
 npm run generate-cv
 ```
 
-### **4. Generate Everything**
+### **3. Generate Everything**
 ```bash
 npm run generate-all
 ```
@@ -46,20 +41,19 @@ npm run generate-all
 | Command | Description |
 |---------|-------------|
 | `npm run generate` | Generate resume website from template |
-| `npm run generate-cv` | Generate professional CV with JasperReports |
-| `npm run setup-jasperreports` | Setup JasperReports (one-time) |
+| `npm run generate-cv` | Generate professional CV |
 | `npm run generate-all` | Generate both website and CV |
 | `npm run install-deps` | Install dependencies |
 
 ## 🎨 **CV Generation Features**
 
-### **Why JasperReports?**
-- **Professional Layout Engine** - No overlapping text issues
-- **Template-Based Design** - Visual designer for layouts
-- **Data Binding** - Direct JSON integration
-- **Enterprise-Grade** - Professional document standards
-- **Automatic Page Breaks** - Smart content flow
-- **High-Quality Typography** - Professional fonts and spacing
+### **Simple & Reliable Approach:**
+- **HTML-based generation** - No complex dependencies
+- **Professional layout** - Clean, readable format
+- **No overlapping text** - Proper spacing and layout
+- **Data-driven content** - Dynamic from JSON
+- **Multiple export options** - PDF or HTML
+- **Cross-platform** - Works on any system
 
 ### **Generated CV Includes:**
 - ✅ **Professional Summary** - Generated from your data
@@ -76,14 +70,11 @@ resume/
 ├── template.html              # Website template
 ├── personal-data.json         # Your personal data
 ├── generate-website.js        # Website generator
-├── generate-cv-jasperreports.js # CV generator
-├── CVGenerator.java           # Java CV generator
-├── cv-template.jrxml          # JasperReports template
-├── setup-jasperreports.sh     # Setup script
+├── generate-cv-simple.js      # CV generator
 ├── generate-all.js            # Combined generator
 ├── styles.css                 # Website styles
 ├── script.js                  # Website scripts
-└── jasperreports/             # JasperReports installation
+└── README.md                  # Documentation
 ```
 
 ## 🔧 **Customization**
@@ -95,9 +86,9 @@ resume/
 4. Run `npm run generate`
 
 ### **CV Customization:**
-1. Edit `cv-template.jrxml` for layout changes
-2. Modify `CVGenerator.java` for data handling
-3. Update styles and colors in template
+1. Edit `generate-cv-simple.js` for layout changes
+2. Modify the HTML template in the generator
+3. Update styles and colors
 4. Run `npm run generate-cv`
 
 ## 📊 **Data Structure**
@@ -114,7 +105,8 @@ Your `personal-data.json` should include:
 
 After generation, you'll get:
 - `index.html` - Your resume website
-- `cv-anthony-okala-jasper.pdf` - Professional CV
+- `cv-anthony-okala-simple.pdf` - Professional CV (if PDF converter available)
+- `cv-anthony-okala.html` - CV in HTML format (fallback)
 - `styles.css` - Website styles
 - `script.js` - Website scripts
 
@@ -126,14 +118,14 @@ After generation, you'll get:
 
 ### **CV Usage:**
 - Use the generated PDF for job applications
-- Share via email or LinkedIn
+- Share the HTML version via email or LinkedIn
 - Print for in-person interviews
 
 ## 🔧 **Technical Requirements**
 
 - **Node.js** 14.0.0 or higher
-- **Java** 11 or higher (for JasperReports)
 - **Modern web browser** (for website)
+- **PDF converter** (optional - wkhtmltopdf, Chrome, or Edge for PDF output)
 
 ## 📈 **Benefits**
 
@@ -146,17 +138,18 @@ After generation, you'll get:
 ### **CV Benefits:**
 - **No overlapping text issues**
 - **Professional layout**
-- **Enterprise-grade quality**
-- **Template-based design**
+- **Clean, readable format**
+- **HTML-based generation**
 - **Data-driven content**
+- **Multiple export options**
 
 ## 🎉 **Success!**
 
 This solution provides:
 - ✅ **Professional website** - Modern, responsive design
-- ✅ **Enterprise-grade CV** - No overlapping text issues
+- ✅ **Clean CV generation** - No overlapping text issues
 - ✅ **Template-based** - Easy to customize
 - ✅ **Data-driven** - Dynamic content generation
-- ✅ **High-quality output** - Professional standards
+- ✅ **Reliable output** - Professional standards
 
 **Ready to generate your professional resume website and CV!** 🚀
