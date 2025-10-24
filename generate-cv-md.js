@@ -50,7 +50,7 @@ class MarkdownCVGenerator {
 
 ${personalInfo.description}
 
----
+
 `;
     }
 
@@ -85,7 +85,7 @@ ${personalInfo.description}
             contactSection += socialText + '\n\n';
         }
         
-        contactSection += '---\n\n';
+        contactSection += '\n\n';
         return contactSection;
     }
 
@@ -126,7 +126,7 @@ ${personalInfo.description}
             summary += '\n';
         }
         
-        summary += '---\n\n';
+        summary += '\n\n';
         return summary;
     }
 
@@ -149,11 +149,11 @@ ${personalInfo.description}
             }
             
             if (index < this.data.projects.length - 1) {
-                projects += '---\n\n';
+                projects += '\n\n';
             }
         });
         
-        projects += '---\n\n';
+        projects += '\n\n';
         return projects;
     }
 
@@ -176,7 +176,7 @@ ${personalInfo.description}
             }
         });
         
-        experience += '---\n\n';
+        experience += '\n\n';
         return experience;
     }
 
@@ -205,7 +205,7 @@ ${personalInfo.description}
         }
         
         if (!isLast) {
-            itemText += '---\n\n';
+            itemText += '\n\n';
         }
         
         return itemText;
@@ -235,11 +235,11 @@ ${personalInfo.description}
             }
             
             if (index < this.data.education.length - 1) {
-                education += '---\n\n';
+                education += '\n\n';
             }
         });
         
-        education += '---\n\n';
+        education += '\n\n';
         return education;
     }
 
@@ -263,7 +263,7 @@ ${personalInfo.description}
             skills += '\n';
         });
         
-        skills += '---\n\n';
+        skills += '\n\n';
         return skills;
     }
 
@@ -281,18 +281,6 @@ ${personalInfo.description}
 *This CV was generated on ${currentDate}*
 
 **${personalInfo.name}** - ${personalInfo.title}
-
----
-
-## Download Options
-
-- **PDF Version:** Available upon request
-- **Markdown Version:** This document
-- **Website:** [Resume Website](https://resume.asok-se.com/okas)
-
----
-
-*Powered by ASOK-SE SARL*
 `;
     }
 }
