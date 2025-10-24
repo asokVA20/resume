@@ -7,6 +7,8 @@
     "generate": "node generate-website.js",
     "generate-cv": "node generate-cv-pdf.js",
     "generate-cv-enhanced": "node generate-cv-pdf-enhanced.js",
+    "generate-cv-simple": "node generate-cv-pdf-simple.js",
+    "generate-cv-fixed": "node generate-cv-pdf-fixed.js",
     "generate-all": "node generate-all.js",
     "install-deps": "npm install"
   },

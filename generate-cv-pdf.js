@@ -61,6 +61,20 @@ class CVGenerator {
         // Set default font
         this.doc.fontSize(CV_CONFIG.fonts.body);
         this.doc.fillColor(CV_CONFIG.colors.text);
+        
+        // Add metadata safely
+        try {
+            this.doc.info = {
+                Title: `${this.data.personalInfo.name} - CV`,
+                Author: this.data.personalInfo.name,
+                Subject: 'Professional CV',
+                Keywords: this.data.personalInfo.keywords || 'CV, Resume, Professional',
+                CreationDate: new Date()
+            };
+        } catch (error) {
+            // If metadata fails, continue without it
+            console.warn('Warning: Could not set PDF metadata');
+        }
     }
 
     generateHeader() {
