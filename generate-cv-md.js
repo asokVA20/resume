@@ -143,7 +143,12 @@ ${personalInfo.description}
         let projects = '## Featured Projects\n\n';
         
         this.data.projects.forEach((project, index) => {
-            projects += `### ${project.title}\n\n`;
+            // Add future/highlighted badge
+            if (project.future || project.highlighted) {
+                projects += `### ⭐ ${project.title} ${project.future ? '*(Future Project)*' : ''}\n\n`;
+            } else {
+                projects += `### ${project.title}\n\n`;
+            }
             
             if (project.description) {
                 projects += `${project.description}\n\n`;

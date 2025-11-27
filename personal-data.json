@@ -137,6 +137,16 @@
   },
   "projects": [
     {
+      "icon": "fas fa-route",
+      "title": "Driver Order Optimizer",
+      "description": "Full-stack application for optimizing order management and daily planning for vehicle drivers (Fahrzeugüberführer). The system integrates with Google Maps API for routing calculations and provides an interactive dashboard for plan visualization, route planning, and order management.",
+      "tags": ["Next.js", "Express.js", "TypeScript", "JavaScript", "Material UI", "Docker", "Dev Containers", "Node.js", "React", "REST API", "Google Maps API", "Zod", "Luxon", "Haversine"],
+      "detailsUrl": "#driver-order-optimizer-project",
+      "onclick": "switchToTab('freelance')",
+      "future": true,
+      "highlighted": true
+    },
+    {
       "icon": "fas fa-robot",
       "title": "RPA Automation Solutions",
       "description": "Developed comprehensive automation solutions using Python and UiPath, achieving 80% reduction in manual effort for data processing and visualization tasks.",
@@ -196,6 +206,26 @@
       "title": "Freelance Work",
       "active": true,
       "items": [
+        {
+          "title": "Driver Order Optimizer - Vehicle Driver Planning System",
+          "company": "Own Initiative",
+          "date": "2025",
+          "projectId": "driver-order-optimizer-project",
+          "description": "Full-stack application for optimizing order management and daily planning for vehicle drivers (Fahrzeugüberführer). The system integrates with Google Maps API for routing calculations and provides an interactive dashboard for plan visualization, route planning, and order management.",
+          "achievements": [
+            "Designed and developed a full-stack application using Next.js (App Router) and Express.js with TypeScript for type-safe development across frontend and backend",
+            "Implemented RESTful API endpoints for order management and interactive plan building with route calculations and travel segment estimates",
+            "Built Material UI dashboard with Next.js for interactive visualization of plans, order management, route calculations, and plan storage with level-based organization",
+            "Integrated Google Maps API (Routes API, Distance Matrix, Geocoding) for driving and transit route calculations with intelligent caching and address normalization",
+            "Created interactive plan builder with level-based plan generation, allowing drivers to manually select orders, calculate routes, manage transitions between orders, and save multiple plan configurations",
+            "Designed plan store service for saving and loading multiple plan configurations with JSON persistence",
+            "Set up comprehensive development environment using VS Code Dev Containers (.devcontainer) for consistent development experience across team members",
+            "Implemented Zod schema validation for all API endpoints ensuring type safety and request validation",
+            "Built geocoding service with persistent caching and Haversine distance calculations for spatial optimizations",
+            "Developed transition routing system supporting both driving and train/transit modes with real-time schedule integration"
+          ],
+          "tags": ["Next.js", "Express.js", "TypeScript", "JavaScript", "Material UI", "Docker", "Dev Containers", "Node.js", "React", "REST API", "Google Maps API", "Zod", "Luxon", "Haversine"]
+        },
         {
           "title": "OKAS FLD - Drive & Delivery Services",
           "company": "Business Website Project",

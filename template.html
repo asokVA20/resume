@@ -148,7 +148,13 @@
             </div>
             <div class="projects-grid">
                 {{#projects}}
-                <div class="project-card">
+                <div class="project-card{{#if future}} project-future{{/if}}{{#if highlighted}} project-highlighted{{/if}}">
+                    {{#if future}}
+                    <div class="project-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Future Project</span>
+                    </div>
+                    {{/if}}
                     <div class="project-image">
                         <div class="project-icon">
                             <i class="{{icon}}"></i>
