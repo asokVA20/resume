@@ -343,9 +343,16 @@
                                     <p>{{description}}</p>
                                     {{/if}}
                                     {{#if achievements}}
-                                    <div class="achievements-list">
-                                        <strong class="achievements-title">Key Achievements:</strong>
+                                    <div class="achievements-list collapsed" data-achievements-id="{{projectId}}{{title}}">
+                                        <strong class="achievements-title" onclick="toggleAchievements('{{projectId}}{{title}}')">
+                                            Key Achievements
+                                            <i class="fas fa-chevron-down"></i>
+                                        </strong>
                                         <ul>{{#achievements}}<li>{{.}}</li>{{/achievements}}</ul>
+                                        <button class="toggle-achievements" onclick="toggleAchievements('{{projectId}}{{title}}')" data-id="{{projectId}}{{title}}">
+                                            <span class="toggle-text">Show More</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
                                     </div>
                                     {{/if}}
                                 </div>

@@ -55,7 +55,13 @@ function processLoops(template, data) {
                 // Process conditionals in the item context
                 itemContent = processConditionals(itemContent, item);
                 
-                // Replace item properties
+                // Replace item properties - handle special case first
+                // Replace {{projectId}}{{title}} pattern before normal replacements
+                itemContent = itemContent.replace(/\{\{projectId\}\}\{\{title\}\}/g, () => {
+                    return item.projectId || item.title || '';
+                });
+                
+                // Now do normal replacements
                 itemContent = itemContent.replace(/\{\{([^}]+)\}\}/g, (itemMatch, itemKey) => {
                     const itemKeys = itemKey.trim().split('.');
                     let itemValue = item;

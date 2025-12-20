@@ -398,6 +398,35 @@ function switchToTab(tabName) {
     }
 }
 
+// Toggle achievements visibility
+function toggleAchievements(id) {
+    // Escape special characters for querySelector
+    const escapedId = id.replace(/[!"#$%&'()*+,.\/:;<=>?@[\\\]^`{|}~]/g, '\\$&');
+    const achievementsList = document.querySelector(`[data-achievements-id="${escapedId}"]`);
+    const toggleButton = achievementsList?.querySelector('.toggle-achievements');
+    const toggleText = toggleButton?.querySelector('.toggle-text');
+    const title = achievementsList?.querySelector('.achievements-title');
+    
+    if (!achievementsList) return;
+    
+    const isCollapsed = achievementsList.classList.contains('collapsed');
+    
+    if (isCollapsed) {
+        achievementsList.classList.remove('collapsed');
+        if (toggleText) toggleText.textContent = 'Show Less';
+        if (toggleButton) toggleButton.classList.add('expanded');
+        if (title) title.classList.add('expanded');
+    } else {
+        achievementsList.classList.add('collapsed');
+        if (toggleText) toggleText.textContent = 'Show More';
+        if (toggleButton) toggleButton.classList.remove('expanded');
+        if (title) title.classList.remove('expanded');
+    }
+}
+
+// Make toggleAchievements available globally
+window.toggleAchievements = toggleAchievements;
+
 // Add loading animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
@@ -407,6 +436,16 @@ window.addEventListener('load', () => {
     
     // Initialize experience tabs
     initExperienceTabs();
+    
+    // Auto-expand first achievement list in each tab (optional - can be removed if too many are expanded)
+    // Uncomment if you want first item expanded by default
+    // const activeTab = document.querySelector('.tab-content.active');
+    // if (activeTab) {
+    //     const firstAchievements = activeTab.querySelector('.achievements-list');
+    //     if (firstAchievements) {
+    //         toggleAchievements(firstAchievements.getAttribute('data-achievements-id'));
+    //     }
+    // }
 });
 
 // Add CSS for loading animation
