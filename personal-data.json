@@ -137,6 +137,80 @@
   },
   "projects": [
     {
+      "icon": "fas fa-shoe-prints",
+      "title": "Daimon Platform",
+      "description": "Enterprise-grade microservices platform connecting customers with shoe repair businesses. Features 8 independent microservices, event-driven architecture, and full-stack applications (Next.js web dashboard, React Native mobile app).",
+      "tags": ["Python", "FastAPI", "Next.js", "React Native", "TypeScript", "PostgreSQL", "RabbitMQ", "Docker", "Microservices"],
+      "detailsUrl": "#daimon-platform-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": true, 
+      "future": true
+    },
+    {
+      "icon": "fas fa-users",
+      "title": "LeitApp Platform",
+      "description": "Enterprise-grade immigration and integration platform with 19+ microservices across Python, TypeScript, Java, and PHP. Features mentorship, document management, job marketplace, AI assistance, and community features.",
+      "tags": ["Python", "Django", "NestJS", "Spring Boot", "Laravel", "Next.js", "TypeScript", "PostgreSQL", "Microservices", "AI/ML"],
+      "detailsUrl": "#leitapp-platform-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": true, 
+      "future": true
+    },
+    {
+      "icon": "fas fa-tools",
+      "title": "Multipurpose Service Website",
+      "description": "Production-ready, full-stack cross-platform application (iOS, Android, Web) with CMS, contact forms, GDPR compliance, and administrative controls. Built with React Native, Expo, Express.js, and SQLite.",
+      "tags": ["React Native", "Expo", "TypeScript", "Express.js", "SQLite", "Node.js", "Cross-Platform"],
+      "detailsUrl": "#multipurpose-service-website-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": true
+    },
+    {
+      "icon": "fas fa-truck",
+      "title": "Logistics Marketplace MVP",
+      "description": "Full-stack multilingual logistics marketplace connecting shippers with service providers. Features three-role system (Shipper, Provider, Admin), provider matching, booking system, payment processing, and messaging.",
+      "tags": ["NestJS", "React Native", "TypeScript", "SQLite", "TypeORM", "i18n", "JWT", "Expo"],
+      "detailsUrl": "#logistics-marketplace-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": true
+    },
+    {
+      "icon": "fas fa-shopping-cart",
+      "title": "Multipurpose Website",
+      "description": "Production-ready, full-stack web application with e-commerce functionality, content management, user authentication, and administrative controls. Built with Next.js 14, TypeScript, Prisma, and NextAuth.js.",
+      "tags": ["Next.js", "TypeScript", "Prisma", "NextAuth.js", "Zustand", "Tailwind CSS", "E-commerce"],
+      "detailsUrl": "#multipurpose-website-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": true
+      },
+      {
+        "icon": "fas fa-laptop-code",
+      "title": "Web & Mobile Platform",
+      "description": "Enterprise-grade corporate website with full legal compliance (DSG - Swiss Data Protection Act), responsive design, and advanced UX features. Built with Next.js 14, TypeScript, and modern web standards.",
+      "tags": ["Next.js", "TypeScript", "React", "CSS3", "DSG Compliance", "SEO"],
+      "detailsUrl": "#web-mobile-platform-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": true
+    },
+    {
+      "icon": "fas fa-heartbeat",
+      "title": "Women's Health NGO Website",
+      "description": "Production-ready, full-stack web application for a Women's Health NGO focused on breast cancer awareness. Features complete CMS, interactive forms, dynamic routing, and enterprise-grade architecture.",
+      "tags": ["Next.js", "TypeScript", "React Hook Form", "Tailwind CSS", "API Routes"],
+      "detailsUrl": "#breast-cancer-ngo-website-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": true
+    },
+    {
+      "icon": "fas fa-music",
+      "title": "Composer Portfolio Website",
+      "description": "Modern, multilingual portfolio website for a classical composer with internationalization (i18n), interactive music player, works catalog with filtering, and responsive design. Built with Next.js 14 and TypeScript.",
+      "tags": ["Next.js", "TypeScript", "next-intl", "Framer Motion", "Tailwind CSS", "i18n"],
+      "detailsUrl": "#composer-website-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": true
+    },
+    {
       "icon": "fas fa-route",
       "title": "Driver Order Optimizer",
       "description": "Full-stack application for optimizing order management and daily planning for vehicle drivers (Fahrzeugüberführer). The system integrates with Google Maps API for routing calculations and provides an interactive dashboard for plan visualization, route planning, and order management.",
@@ -206,6 +280,183 @@
       "title": "Freelance Work",
       "active": true,
       "items": [
+        {
+          "title": "Daimon Platform - Enterprise Microservices Platform",
+          "company": "Own Initiative",
+          "date": "2024 - 2025",
+          "projectId": "daimon-platform-project",
+          "description": "Comprehensive microservices-based digital platform connecting customers with shoe repair businesses. Enterprise-grade project with 8 independent microservices, event-driven architecture, and production-ready infrastructure.",
+          "achievements": [
+            "Designed and implemented scalable microservices architecture with 8 independent services using domain-driven design",
+            "Built event-driven communication system using RabbitMQ message queue for asynchronous service communication",
+            "Created unified API gateway using Nginx with routing, load balancing, and SSL/TLS termination",
+            "Implemented full-stack applications: Next.js web dashboard, React Native mobile app, and RESTful API",
+            "Developed microservices in Python/FastAPI including User, Order, Payment, Chat, Image Analysis, Analytics, Notification, and Shipping services",
+            "Integrated third-party services: Stripe (payments), SendGrid (email), Firebase (push notifications), Vision AI (image analysis), DHL/DPD (shipping)",
+            "Set up comprehensive monitoring stack with Prometheus and Grafana for metrics collection and visualization",
+            "Implemented Docker containerization for all services with Docker Compose orchestration",
+            "Built CI/CD pipeline with GitLab CI including automated testing, security scanning, and validation",
+            "Designed multi-database strategy: PostgreSQL (per service), TimescaleDB (analytics), Redis (caching)",
+            "Implemented JWT-based authentication, password hashing with Bcrypt, and security best practices",
+            "Created real-time chat system using WebSockets with Redis for state management",
+            "Developed time-series analytics service with event stream processing and business intelligence dashboards"
+          ],
+          "tags": ["Python", "FastAPI", "Next.js", "React Native", "TypeScript", "PostgreSQL", "RabbitMQ", "Docker", "Microservices", "Nginx", "Prometheus", "Grafana", "Stripe", "Redis", "TimescaleDB"]
+        },
+        {
+          "title": "LeitApp Platform - Immigration & Integration Platform",
+          "company": "Own Initiative",
+          "date": "2024 - 2025",
+          "projectId": "leitapp-platform-project",
+          "description": "Enterprise-grade immigration and integration platform with 19+ microservices across multiple technology stacks. Supports immigrants in Germany with mentorship, document management, job marketplace, AI assistance, and community features.",
+          "achievements": [
+            "Designed and architected microservices system with 19+ independent services across 4 programming languages (Python, TypeScript, Java, PHP)",
+            "Implemented hybrid technology stack optimized per service domain: Django (Python), NestJS (TypeScript), Spring Boot (Java), Laravel (PHP)",
+            "Built comprehensive frontend application using Next.js 14 with React 18, TypeScript, Tailwind CSS, and modern UI libraries",
+            "Developed AI-powered services: Conversational AI with GPT-4, recommendations engine, predictive analytics, and document understanding",
+            "Created voice processing service with Text-to-Speech (AWS Polly, Google TTS) and Speech-to-Text (OpenAI Whisper)",
+            "Implemented multi-provider payment gateway with Stripe, PayPal, Revolut, and Wise, including subscription management and ZUGFeRD-compliant invoicing",
+            "Built real-time communication system using WebSockets (Django Channels, Socket.io) for messaging and notifications",
+            "Designed secure document management system with AWS S3 storage, AI-powered extraction, and multi-language translation support",
+            "Implemented translation services supporting 7 languages: German, English, Arabic, Turkish, Spanish, French, Polish",
+            "Created comprehensive API Gateway for centralized routing, authentication, and service orchestration",
+            "Set up event-driven architecture with message queues (Celery, Bull Queue, RabbitMQ/Kafka) for asynchronous processing",
+            "Implemented enterprise-grade security: JWT authentication, GDPR/DSGVO compliance, PCI DSS considerations",
+            "Completed 3 SDLC phases: Planning & Requirements Analysis, Requirements Definition (13 functional, 6 non-functional), Design & Architecture",
+            "Achieved 100% requirements traceability from business needs to implementation with comprehensive documentation (50+ technical documents)"
+          ],
+          "tags": ["Python", "Django", "NestJS", "Spring Boot", "Laravel", "Next.js", "TypeScript", "PostgreSQL", "Redis", "AWS", "Docker", "Microservices", "AI/ML", "OpenAI", "Stripe", "WebSockets"]
+        },
+        {
+          "title": "Multipurpose Service Website - Cross-Platform Application",
+          "company": "Own Initiative",
+          "date": "2024 - 2025",
+          "projectId": "multipurpose-service-website-project",
+          "description": "Production-ready, full-stack cross-platform application (iOS, Android, Web) with CMS, contact forms, GDPR compliance, and administrative controls. Single codebase supporting multiple platforms.",
+          "achievements": [
+            "Developed cross-platform application using React Native 0.81.5 with Expo 54.0, supporting iOS, Android, and Web from single codebase",
+            "Built comprehensive Content Management System (CMS) with database-driven content, admin interface, and full CRUD operations",
+            "Implemented RESTful API backend using Express.js with SQLite database, parameterized queries, and secure file upload handling",
+            "Created contact form system with comprehensive validation (client and server-side), GDPR compliance, and email integration via Nodemailer",
+            "Designed GDPR/DSGVO-compliant legal pages including Privacy Policy and Impressum with privacy consent mechanisms",
+            "Implemented file upload system with Multer, image validation (JPEG, PNG, GIF, WebP), 5MB size limits, and secure storage",
+            "Built responsive design system with mobile-first approach, custom responsive utilities, and enterprise design tokens",
+            "Developed navigation system using Expo Router with file-based routing, deep linking support, and custom header components",
+            "Implemented authentication system with bcrypt password hashing, secure session management, and admin access control",
+            "Created database architecture with well-structured schema: Services, Page Content, Contact Info, Settings, Media, Admin Users",
+            "Set up development environment with TypeScript strict mode, Nodemon, Concurrently, and environment variable management",
+            "Implemented form validation using Express Validator with input sanitization, XSS protection, and SQL injection prevention"
+          ],
+          "tags": ["React Native", "Expo", "TypeScript", "Express.js", "SQLite", "Node.js", "Cross-Platform", "CMS", "GDPR", "Multer", "bcrypt", "Nodemailer"]
+        },
+        {
+          "title": "Logistics Marketplace MVP - Full-Stack Platform",
+          "company": "Own Initiative",
+          "date": "2024 - 2025",
+          "projectId": "logistics-marketplace-project",
+          "description": "Full-stack multilingual logistics marketplace platform connecting shippers with service providers (freelancers and small logistics companies). Features three-role system with shipment management, provider matching, booking, payment processing, and messaging.",
+          "achievements": [
+            "Developed full-stack TypeScript application with NestJS backend and React Native frontend, ensuring type safety across entire stack",
+            "Implemented multi-role system with Role-Based Access Control (RBAC): Shipper, Provider, and Admin roles with JWT authentication",
+            "Built advanced provider matching algorithm with intelligent matching based on service areas, capacity filtering, availability checking, and multiple rate calculation methods",
+            "Created comprehensive booking and payment system with automated booking creation, 15% platform commission calculation, multiple payment methods, and earnings tracking",
+            "Implemented complete multilingual support for 3 languages (English, Arabic, Kurdish) with RTL layout support using i18next",
+            "Designed modular backend architecture with 9 feature modules: Auth, Users, Providers, Shipments, Bookings, Payments, Ratings, Messages, Admin",
+            "Built 7 database entities with TypeORM: User, Provider, Shipment, Booking, Payment, Rating, Message with proper relationships",
+            "Developed 30+ REST API endpoints with RESTful design, proper HTTP methods, service layer pattern, and dependency injection",
+            "Created cross-platform mobile application with 24+ screens across all user roles, platform-specific optimizations, and native navigation patterns",
+            "Implemented real-time features: shipment status tracking, in-app messaging system, live booking status updates, and provider availability management",
+            "Built comprehensive admin dashboard with statistics, user management, provider verification workflow, commission tracking, and analytics",
+            "Designed database with normalized entities, TypeORM decorators, One-to-Many and Many-to-One relationships, and automatic migration support"
+          ],
+          "tags": ["NestJS", "React Native", "TypeScript", "SQLite", "TypeORM", "i18n", "JWT", "Expo", "Passport.js", "bcrypt", "Axios", "AsyncStorage"]
+        },
+        {
+          "title": "Multipurpose Website - E-Commerce Platform",
+          "company": "Own Initiative",
+          "date": "2024 - 2025",
+          "projectId": "multipurpose-website-project",
+          "description": "Production-ready, full-stack web application with e-commerce functionality, content management, user authentication, and administrative controls. Built with Next.js 14, TypeScript, Prisma, and NextAuth.js.",
+          "achievements": [
+            "Developed full-stack web application using Next.js 14 (App Router) with TypeScript 5.5, React 18.3, and server-side rendering",
+            "Implemented comprehensive e-commerce functionality: shopping cart with persistent storage, product catalog with filtering, order management, and inventory tracking",
+            "Built user authentication system with NextAuth.js 4.24, JWT-based sessions, role-based access control (User/Admin), and protected routes with middleware",
+            "Created admin Content Management System (CMS) with comprehensive dashboard, product management (CRUD), contact message management, user management, and real-time statistics",
+            "Designed database architecture using Prisma 5.19 ORM with SQLite (PostgreSQL-ready): User, Product, Order, Cart, ContactMessage, Page, Session, Account models",
+            "Implemented state management with Zustand 4.5 including localStorage persistence, optimistic UI updates, and type-safe cart operations",
+            "Built form handling system with React Hook Form 7.52 and Zod 3.23 validation for contact forms, product management, and user registration",
+            "Developed responsive design with Tailwind CSS 3.4, mobile-first approach, modern UI components, and accessible design patterns",
+            "Implemented security features: password hashing with bcryptjs (10 rounds), SQL injection prevention (Prisma ORM), XSS protection, CSRF protection, and input validation",
+            "Created API routes with RESTful design, error handling patterns, request validation, proper HTTP status codes, and JSON response formatting",
+            "Set up development environment with TypeScript strict mode, ESLint configuration, path aliases, and production-ready build configuration"
+          ],
+          "tags": ["Next.js", "TypeScript", "Prisma", "NextAuth.js", "Zustand", "Tailwind CSS", "E-commerce", "React Hook Form", "Zod", "bcryptjs", "JWT"]
+        },
+        {
+          "title": "Web & Mobile Platform - Corporate Website",
+          "company": "Own Initiative",
+          "date": "2024 - 2025",
+          "projectId": "web-mobile-platform-project",
+          "description": "Enterprise-grade corporate website with full legal compliance (DSG - Swiss Data Protection Act), responsive design, and advanced UX features. Built with Next.js 14, TypeScript, and modern web standards.",
+          "achievements": [
+            "Developed enterprise-grade corporate website using Next.js 14 (App Router) with TypeScript 5.3.3, React 18.2.0, and server-side rendering",
+            "Implemented DSG-compliant cookie management system with granular consent (Necessary, Analytics, Marketing), 365-day persistence, dynamic script loading, and custom event system",
+            "Created complete legal documentation: comprehensive Impressum (legal notice) per DSG Art. 6 Abs. 1, detailed privacy policy (Datenschutzerklärung), and GDPR/DSG-compliant data handling",
+            "Built performance-optimized application with React Server Components, SWC minification, optimized bundle size, and SEO-friendly metadata management",
+            "Developed responsive design with mobile-first approach, smooth scroll animations using Intersection Observer API, and accessible navigation with ARIA labels",
+            "Implemented modern UI/UX with professional design system, CSS Variables for theme system, consistent spacing and typography, and interactive forms with validation",
+            "Created reusable component architecture: Header, Footer, CookieBanner, AnimateOnScroll with modularity and clean code structure",
+            "Built multi-page website: Homepage, Products, About Us, Contact, Impressum, Privacy Policy with semantic HTML structure",
+            "Designed CSS architecture with centralized design tokens (colors, spacing, typography), CSS Grid and Flexbox layouts, and modern CSS animations",
+            "Implemented error handling with robust cookie parsing, consent management, and user-friendly error messages",
+            "Set up development environment with TypeScript strict mode, ESLint 8.56.0, Next.js ESLint config, and Git version control"
+          ],
+          "tags": ["Next.js", "TypeScript", "React", "CSS3", "DSG Compliance", "SEO", "Intersection Observer", "Server Components", "ESLint"]
+        },
+        {
+          "title": "Women's Health NGO Website - Full-Stack Application",
+          "company": "Own Initiative",
+          "date": "2024 - 2025",
+          "projectId": "breast-cancer-ngo-website-project",
+          "description": "Production-ready, full-stack web application for a Women's Health NGO focused on breast cancer awareness in Adare, Ireland. Features complete content management system, interactive forms, dynamic routing, and enterprise-grade architecture.",
+          "achievements": [
+            "Developed full-stack web application using Next.js 14.2.33 (App Router) with TypeScript 5.3.3, React 18.2.0, and server-side rendering",
+            "Built multi-page website architecture with 8+ pages: Home, Mission, Initiatives, Events, Blog System, Donate, Volunteer, Contact with dynamic routing",
+            "Created comprehensive blog system with dynamic blog post pages using [slug] routing, category-based organization, date formatting with date-fns, and SEO-friendly URL structure",
+            "Implemented advanced form systems: Donation form with preset amounts, custom amount input, anonymous donation option; Volunteer application with multi-field collection, interest selection, availability dropdown",
+            "Developed 3 fully implemented API endpoints: /api/contact, /api/donate, /api/volunteer with request validation, error handling, proper HTTP status codes, and ready for third-party integrations",
+            "Built responsive navigation with desktop horizontal menu, mobile hamburger menu, sticky navigation bar, smooth transitions, and accessibility attributes",
+            "Implemented form management with React Hook Form 7.49.2, advanced validation, error handling, loading states, success feedback, and auto-reset functionality",
+            "Created custom Tailwind configuration with primary/accent color palettes, custom font families, reusable component classes, typography scales, and consistent spacing",
+            "Designed user experience features: loading states for form submissions, success messages with visual feedback, error handling, smooth scroll behavior, and hover effects",
+            "Implemented error handling: custom 404 page, API error responses, form validation errors, user-friendly error messages, and try-catch patterns",
+            "Set up development environment with TypeScript strict mode, ESLint 8.56.0, Next.js ESLint config, and production-ready build configuration",
+            "Ensured accessibility (WCAG compliance): ARIA labels and roles, semantic HTML5 structure, keyboard navigation support, focus indicators, screen reader compatibility"
+          ],
+          "tags": ["Next.js", "TypeScript", "React Hook Form", "Tailwind CSS", "API Routes", "date-fns", "SEO", "Accessibility", "WCAG"]
+        },
+        {
+          "title": "Composer Portfolio Website - Multilingual Platform",
+          "company": "Own Initiative",
+          "date": "2024 - 2025",
+          "projectId": "composer-website-project",
+          "description": "Modern, multilingual portfolio website for a classical composer with internationalization (i18n), interactive music player, works catalog with filtering, and responsive design. Built with Next.js 14 and TypeScript.",
+          "achievements": [
+            "Developed multilingual portfolio website using Next.js 14.2.0 (App Router) with TypeScript 5.3.3, React 18.3.0, and full internationalization support",
+            "Implemented complete internationalization (i18n) with next-intl 3.26.5, bilingual support (German/English), middleware-based locale routing and detection, and dynamic content localization",
+            "Built interactive music player component with custom audio player using React hooks, playlist management, progress tracking and seeking, volume control, auto-play, and track navigation",
+            "Created comprehensive works catalog system with dynamic filtering by category (8+ categories), real-time search across titles/descriptions/instrumentation, memoized filtering with useMemo, and individual work detail pages",
+            "Developed 11+ fully functional pages: Biography, Works, News, Discography, Press, Media, Contact, Listen, Scores, Versus Vox with dynamic routing and static generation",
+            "Implemented advanced Next.js App Router architecture with dynamic routes ([locale], [id]), server and client components, static generation with generateStaticParams, and optimized routing",
+            "Built responsive and accessible design with mobile-first layout, ARIA labels, semantic HTML structure, keyboard navigation support, and custom scrollbar styling",
+            "Created modern UI/UX features: smooth page transitions with Framer Motion 11.0.0, animated navigation indicators, backdrop blur effects, gradient backgrounds, hover states, and mobile hamburger menu",
+            "Implemented performance optimizations: Next.js image optimization, code splitting and lazy loading, optimized bundle size, and efficient re-renders with React hooks",
+            "Designed type-safe development with TypeScript interfaces for all data structures, strict type checking, type-safe component props, and centralized type definitions",
+            "Set up development environment with TypeScript strict mode, ESLint 8.56.0, Next.js ESLint config, and modern build optimization",
+            "Created custom design system with Tailwind CSS 3.4.1, custom theme configuration, primary/accent color palette, typography, and animations"
+          ],
+          "tags": ["Next.js", "TypeScript", "next-intl", "Framer Motion", "Tailwind CSS", "i18n", "React Hooks", "Audio API", "SEO"]
+        },
         {
           "title": "Driver Order Optimizer - Vehicle Driver Planning System",
           "company": "Own Initiative",
@@ -648,23 +899,23 @@
     }
   ],
   "contactInfo": [
-    {
-      "icon": "fas fa-envelope",
-      "title": "Email",
+      {
+        "icon": "fas fa-envelope",
+        "title": "Email",
       "content": "asok.va20@gmail.com"
-    },
-    {
-      "icon": "fas fa-phone",
-      "title": "Phone",
+      },
+      {
+        "icon": "fas fa-phone",
+        "title": "Phone",
       "content": "+49 176 77016856"
-    },
-    {
-      "icon": "fas fa-map-marker-alt",
-      "title": "Location",
+      },
+      {
+        "icon": "fas fa-map-marker-alt",
+        "title": "Location",
       "content": "Zapfenweg 18, 60120 Halle (Saale), Saxony-Anhalt, Germany"
-    },
-    {
-      "icon": "fas fa-download",
+      },
+      {
+        "icon": "fas fa-download",
       "title": "Resume",
       "downloadButtons": [
         {
