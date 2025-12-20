@@ -1,4 +1,9 @@
-const fs = require('fs');
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 class MarkdownCVGenerator {
     constructor(data) {
@@ -318,9 +323,9 @@ function generateMarkdownCV() {
 }
 
 // Export for use in other files
-module.exports = { generateMarkdownCV, MarkdownCVGenerator };
+export { generateMarkdownCV, MarkdownCVGenerator };
 
 // Run if called directly
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}` || process.argv[1]?.endsWith('generate-cv-md.js')) {
     generateMarkdownCV();
 }

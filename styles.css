@@ -594,6 +594,181 @@ body {
     cursor: pointer;
 }
 
+/* Achievements Section */
+.achievements {
+    padding: var(--spacing-20) var(--spacing-4);
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.achievements::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(79, 70, 229, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+    margin-top: var(--spacing-12);
+    position: relative;
+    z-index: 1;
+}
+
+.achievement-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-6);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-blue-navy), var(--indigo-light), var(--secondary-yellow));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--indigo-light);
+}
+
+.achievement-card:hover::before {
+    transform: scaleX(1);
+}
+
+.achievement-card.highlight {
+    background: linear-gradient(135deg, var(--primary-blue-navy) 0%, var(--indigo-dark) 100%);
+    color: var(--white);
+    border: 2px solid var(--indigo-light);
+    box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.3), 0 10px 10px -5px rgba(79, 70, 229, 0.2);
+}
+
+.achievement-card.highlight .achievement-number {
+    color: var(--secondary-yellow);
+    text-shadow: 0 2px 4px rgba(245, 158, 11, 0.3);
+}
+
+.achievement-card.highlight .achievement-label {
+    color: var(--white);
+}
+
+.achievement-card.highlight .achievement-description {
+    color: var(--gray-200);
+}
+
+.achievement-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--indigo-light), var(--primary-blue-navy));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-4);
+    color: var(--white);
+    font-size: var(--font-size-2xl);
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+}
+
+.achievement-card.highlight .achievement-icon {
+    background: linear-gradient(135deg, var(--secondary-yellow), var(--yellow-dark));
+    box-shadow: 0 4px 6px -1px rgba(245, 158, 11, 0.3);
+}
+
+.achievement-content {
+    position: relative;
+}
+
+.achievement-number {
+    font-size: var(--font-size-5xl);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--primary-blue-navy);
+    margin-bottom: var(--spacing-2);
+    background: linear-gradient(135deg, var(--primary-blue-navy), var(--indigo-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.achievement-label {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: var(--spacing-3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.achievement-description {
+    font-size: var(--font-size-base);
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-top: var(--spacing-2);
+}
+
+@media (max-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-4);
+    }
+    
+    .achievement-card {
+        padding: var(--spacing-5);
+    }
+    
+    .achievement-number {
+        font-size: var(--font-size-4xl);
+    }
+}
+
+/* Enhanced Button Styles */
+.btn-large {
+    padding: var(--spacing-4) var(--spacing-8);
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-blue-navy);
+    color: var(--primary-blue-navy);
+}
+
+.btn-outline:hover {
+    background: var(--primary-blue-navy);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-4);
+    margin-top: var(--spacing-6);
+}
+
 /* Section Styles */
 .section-header {
     text-align: center;
@@ -869,24 +1044,51 @@ body {
     margin-left: var(--spacing-4);
 }
 
+.achievements-list {
+    margin-top: var(--spacing-5);
+    padding: var(--spacing-5);
+    background: linear-gradient(135deg, var(--gray-50), var(--white));
+    border-left: 4px solid var(--primary-blue-navy);
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.achievements-title {
+    display: block;
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--primary-blue-navy);
+    margin-bottom: var(--spacing-4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .timeline-description ul {
     list-style: none;
     margin-bottom: var(--spacing-4);
+    padding: 0;
 }
 
 .timeline-description li {
     position: relative;
     padding-left: var(--spacing-6);
-    margin-bottom: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
     color: var(--gray-700);
+    line-height: 1.7;
+    font-size: var(--font-size-base);
 }
 
 .timeline-description li::before {
-    content: '▶';
+    content: '✓';
     position: absolute;
     left: 0;
     color: var(--primary-blue-navy);
-    font-size: var(--font-size-sm);
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    background: linear-gradient(135deg, var(--indigo-light), var(--primary-blue-navy));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .timeline-tags {

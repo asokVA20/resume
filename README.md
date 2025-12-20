@@ -16,17 +16,37 @@ A professional resume website generator using modern web technologies. Create a 
 
 ## **Quick Start**
 
-### **1. Generate Website**
+### **Development Server (Vite)**
+Start the development server with hot module replacement:
+```bash
+npm run dev
+```
+This will start Vite dev server on `http://localhost:3000`
+
+### **Build for Production**
+Build optimized production files:
+```bash
+npm run build
+```
+Output will be in the `dist/` directory.
+
+### **Preview Production Build**
+Preview the production build locally:
+```bash
+npm run preview
+```
+
+### **Generate Website from Template**
 ```bash
 npm run generate
 ```
 
-### **2. Generate Markdown CV**
+### **Generate Markdown CV**
 ```bash
 npm run generate-cv
 ```
 
-### **3. Generate Everything**
+### **Generate Everything**
 ```bash
 npm run generate-all
 ```
@@ -35,6 +55,9 @@ npm run generate-all
 
 | Command | Description |
 |---------|-------------|
+| `npm run dev` | Start Vite development server with HMR |
+| `npm run build` | Build optimized production files |
+| `npm run preview` | Preview production build locally |
 | `npm run generate` | Generate resume website from template |
 | `npm run generate-cv` | Generate Markdown CV |
 | `npm run generate-all` | Generate both website and CV |
@@ -118,8 +141,16 @@ resume/
 ## **Technical Requirements**
 
 - **Node.js** - Version 14.0.0 or higher
+- **Vite** - Modern build tool (installed as dev dependency)
 - **Modern browser** - For viewing the website
 - **Text editor** - For customizing content
+
+## **Tech Stack**
+
+- **Build Tool**: Vite 5+ (fast HMR, optimized builds)
+- **JavaScript**: Vanilla ES6+ modules
+- **CSS**: Custom CSS with modern features
+- **Template Engine**: Custom Node.js template system
 
 ## **Benefits**
 

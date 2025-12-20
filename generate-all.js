@@ -1,5 +1,11 @@
-const fs = require('fs');
-const { generateMarkdownCV } = require('./generate-cv-md.js');
+import fs from 'fs';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+import { generateMarkdownCV } from './generate-cv-md.js';
+import { fileURLToPath } from 'url';
+
+const execAsync = promisify(exec);
+const __filename = fileURLToPath(import.meta.url);
 
 // Main generator script
 async function generateAll() {
@@ -8,15 +14,15 @@ async function generateAll() {
     try {
         // 1. Generate website
         console.log('📄 Generating website...');
-        const { exec } = require('child_process');
-        
-        exec('node generate-website.js', (error, stdout, stderr) => {
-            if (error) {
-                console.error('❌ Website generation error:', error);
-                return;
-            }
+        try {
+            const { stdout, stderr } = await execAsync('node generate-website.js');
+            if (stdout) console.log(stdout);
+            if (stderr) console.error(stderr);
             console.log('✅ Website generated successfully!');
-        });
+        } catch (error) {
+            console.error('❌ Website generation error:', error.message);
+            throw error;
+        }
         
         // 2. Generate Markdown CV
         console.log('📝 Generating Markdown CV...');
@@ -36,10 +42,11 @@ async function generateAll() {
         
     } catch (error) {
         console.error('❌ Error during generation:', error.message);
+        process.exit(1);
     }
 }
 
 // Run if called directly
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}` || process.argv[1]?.endsWith('generate-all.js')) {
     generateAll();
 }

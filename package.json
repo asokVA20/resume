@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "A template-based resume website generator",
   "main": "generate-website.js",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "generate": "node generate-website.js",
     "generate-cv": "node generate-cv-md.js",
     "generate-all": "node generate-all.js",
@@ -25,5 +29,8 @@
   "license": "MIT",
   "engines": {
     "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.21"
   }
 }

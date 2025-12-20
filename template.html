@@ -4,11 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{personalInfo.name}} - {{personalInfo.title}}</title>
+    <title>{{personalInfo.name}} - {{personalInfo.title}} | Expert in RPA, Automation & Full-Stack Development</title>
     <meta name="description"
         content="{{personalInfo.description}}">
     <meta name="keywords"
         content="{{personalInfo.keywords}}">
+    <meta name="author" content="{{personalInfo.name}}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://anthonyokala.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anthonyokala.com/">
+    <meta property="og:title" content="{{personalInfo.name}} - {{personalInfo.title}}">
+    <meta property="og:description" content="{{personalInfo.description}}">
+    <meta property="og:site_name" content="{{personalInfo.name}} - Professional Portfolio">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://anthonyokala.com/">
+    <meta property="twitter:title" content="{{personalInfo.name}} - {{personalInfo.title}}">
+    <meta property="twitter:description" content="{{personalInfo.description}}">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "{{personalInfo.name}}",
+      "jobTitle": "{{personalInfo.title}}",
+      "description": "{{personalInfo.description}}",
+      "url": "https://anthonyokala.com",
+      "sameAs": [
+        {{#socialLinks}}
+        "{{url}}"{{#unless @last}},{{/unless}}
+        {{/socialLinks}}
+      ],
+      "knowsAbout": [
+        "Process Automation",
+        "RPA Development",
+        "Software Development",
+        "Full-Stack Development",
+        "Machine Learning",
+        "Web Development"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Technical University of Clausthal"
+      }
+    }
+    </script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
@@ -16,7 +61,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
@@ -28,6 +73,7 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#experience" class="nav-link">Experience</a>
@@ -69,7 +115,7 @@
                     </div>
                     <div class="hero-social">
                         {{#socialLinks}}
-                        <a href="{{url}}" target="_blank" class="social-link" aria-label="{{name}}">
+                        <a href="{{url}}" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="{{name}}">
                             <i class="{{icon}}"></i>
                         </a>
                         {{/socialLinks}}
@@ -94,12 +140,84 @@
         </div>
     </section>
 
+    <!-- Key Achievements / Impact Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proven Impact & Achievements</h2>
+                <p class="section-subtitle">Delivering measurable results that drive business success</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card highlight">
+                    <div class="achievement-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">80%</div>
+                        <div class="achievement-label">Automation Achieved</div>
+                        <p class="achievement-description">Reduced manual effort by 80% with goal to reach 99% automation at DB Regio AG</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-microservices"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">8+</div>
+                        <div class="achievement-label">Microservices Built</div>
+                        <p class="achievement-description">Designed and implemented enterprise-grade microservices architecture</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">25+</div>
+                        <div class="achievement-label">Projects Delivered</div>
+                        <p class="achievement-description">Successfully completed projects for clients including Volkswagen AG and DB Regio AG</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">25+</div>
+                        <div class="achievement-label">Technologies Mastered</div>
+                        <p class="achievement-description">Expert in Java, Python, JavaScript, TypeScript, React, Django, Spring Boot, Laravel, and more</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">3</div>
+                        <div class="achievement-label">Languages</div>
+                        <p class="achievement-description">Fluent in English, German, and French - enabling global collaboration</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <div class="achievement-number">10+</div>
+                        <div class="achievement-label">Years Experience</div>
+                        <p class="achievement-description">Extensive expertise in automation, software development, and safety-critical systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate about technology and innovation</p>
+                <p class="section-subtitle">Transforming businesses through innovative automation and cutting-edge software solutions</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
@@ -144,7 +262,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Solutions that drive results</p>
+                <p class="section-subtitle">Enterprise-grade solutions delivering measurable business impact</p>
             </div>
             <div class="projects-grid">
                 {{#projects}}
@@ -170,7 +288,7 @@
                         </div>
                         <div class="project-links">
                             {{#if liveUrl}}
-                            <a href="{{liveUrl}}" target="_blank" class="project-link">
+                            <a href="{{liveUrl}}" target="_blank" rel="noopener noreferrer" class="project-link">
                                 <i class="fas fa-external-link-alt"></i>
                                 View Live
                             </a>
@@ -194,7 +312,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Professional Experience</h2>
-                <p class="section-subtitle">Comprehensive journey across freelance, professional, and academic work</p>
+                <p class="section-subtitle">Proven track record delivering exceptional results for industry leaders</p>
             </div>
 
             <div class="experience-tabs">
@@ -225,7 +343,10 @@
                                     <p>{{description}}</p>
                                     {{/if}}
                                     {{#if achievements}}
-                                    <ul>{{#achievements}}<li>{{.}}</li>{{/achievements}}</ul>
+                                    <div class="achievements-list">
+                                        <strong class="achievements-title">Key Achievements:</strong>
+                                        <ul>{{#achievements}}<li>{{.}}</li>{{/achievements}}</ul>
+                                    </div>
                                     {{/if}}
                                 </div>
                                 {{#if tags}}
@@ -303,8 +424,8 @@
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's discuss your next project</p>
+                <h2 class="section-title">Ready to Transform Your Business?</h2>
+                <p class="section-subtitle">Let's discuss how I can help you achieve your automation and software development goals</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -397,7 +518,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script type="module" src="/script.js"></script>
     <script>
         // Contact form handling
         document.addEventListener('DOMContentLoaded', function() {
