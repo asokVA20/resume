@@ -177,6 +177,19 @@ body {
     padding: 0 var(--spacing-4);
 }
 
+/* Wider container for larger screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+}
+
 /* Navigation */
 .navbar {
     position: fixed;
@@ -308,11 +321,19 @@ body {
     margin: 0 auto;
     padding: 0 var(--spacing-4);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: var(--spacing-16);
     align-items: center;
     position: relative;
     z-index: 2;
+}
+
+@media (min-width: 1400px) {
+    .hero-container {
+        max-width: 1400px;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--spacing-20);
+    }
 }
 
 .hero-content {
@@ -736,11 +757,31 @@ body {
 
 .achievements-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-8);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-6);
     margin-top: var(--spacing-12);
     position: relative;
     z-index: 1;
+}
+
+/* Better grid for achievements - 3 columns on large screens */
+@media (min-width: 1200px) {
+    .achievements-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-8);
+    }
+    
+    /* Make highlight card span 2 columns on large screens */
+    .achievement-card.highlight {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1600px) {
+    .achievements-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-10);
+    }
 }
 
 .achievement-card {
@@ -964,11 +1005,32 @@ body {
     background: linear-gradient(90deg, transparent, var(--gray-200), transparent);
 }
 
+/* Better mobile layout for about section */
+@media (max-width: 1024px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-8);
+    }
+    
+    .about-stats {
+        order: -1;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: var(--spacing-8);
+    }
+}
+
 .about-content {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: var(--spacing-16);
+    grid-template-columns: 1.5fr 1fr;
+    gap: var(--spacing-12);
     align-items: start;
+}
+
+@media (min-width: 1400px) {
+    .about-content {
+        grid-template-columns: 2fr 1fr;
+        gap: var(--spacing-16);
+    }
 }
 
 .about-card {
@@ -1033,8 +1095,15 @@ body {
 
 .expertise-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-4);
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3);
+}
+
+@media (min-width: 768px) {
+    .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-4);
+    }
 }
 
 .expertise-item {
@@ -1086,8 +1155,17 @@ body {
 
 .about-stats {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: var(--spacing-4);
+    position: sticky;
+    top: 100px;
+}
+
+@media (max-width: 1024px) {
+    .about-stats {
+        position: static;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .stat-card {
@@ -1222,8 +1300,14 @@ body {
 
 .timeline {
     position: relative;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+    .timeline {
+        max-width: 1100px;
+    }
 }
 
 .timeline::before {
@@ -1487,10 +1571,45 @@ body {
     background: linear-gradient(90deg, transparent, var(--gray-200), transparent);
 }
 
+/* Skills + Education Combined Layout for Desktop */
+@media (min-width: 1024px) {
+    .skills-education-wrapper {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        gap: var(--spacing-16);
+        align-items: start;
+    }
+    
+    .skills-section {
+        padding: 0;
+    }
+    
+    .education-section {
+        padding: 0;
+        position: sticky;
+        top: 100px;
+    }
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-10);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-8);
+}
+
+/* Better skills grid for larger screens */
+@media (min-width: 1200px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-10);
+    }
+}
+
+@media (min-width: 1600px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-10);
+    }
 }
 
 .skill-category {
@@ -1641,8 +1760,32 @@ body {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: var(--spacing-10);
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: var(--spacing-8);
+}
+
+/* Better project grid layout for large screens */
+@media (min-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-10);
+    }
+    
+    /* Featured/highlighted projects can span full width */
+    .project-card.project-highlighted:nth-child(1) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1600px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-10);
+    }
+    
+    .project-card.project-highlighted:nth-child(1) {
+        grid-column: 1 / -1;
+    }
 }
 
 .project-card {
@@ -1860,8 +2003,14 @@ body {
 }
 
 .education-timeline {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+    .education-timeline {
+        max-width: 100%;
+    }
 }
 
 .education-item {
@@ -1968,14 +2117,28 @@ body {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: var(--spacing-16);
+    align-items: start;
+}
+
+@media (min-width: 1400px) {
+    .contact-content {
+        grid-template-columns: 1fr 1.3fr;
+        gap: var(--spacing-20);
+    }
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .contact-card {
