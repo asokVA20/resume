@@ -833,8 +833,8 @@
       "items": [
         {"name": "Python", "level": "95"},
         {"name": "Java", "level": "90"},
-        {"name": "JavaScript", "level": "85"},
-        {"name": "TypeScript", "level": "80"},
+        {"name": "JavaScript", "level": "90"},
+        {"name": "TypeScript", "level": "90"},
         {"name": "PHP", "level": "85"},
         {"name": "C++", "level": "85"},
         {"name": "VBA Excel", "level": "90"}
@@ -845,11 +845,31 @@
       "items": [
         {"name": "UiPath", "level": "95"},
         {"name": "Django", "level": "90"},
+        {"name": "FastAPI", "level": "90"},
         {"name": "Spring Boot", "level": "85"},
-        {"name": "Next.js", "level": "80"},
-        {"name": "React Native", "level": "80"},
+        {"name": "NestJS", "level": "85"},
+        {"name": "Next.js", "level": "90"},
+        {"name": "React", "level": "90"},
+        {"name": "React Native", "level": "85"},
+        {"name": "Expo", "level": "85"},
         {"name": "Laravel", "level": "85"},
+        {"name": "Express.js", "level": "85"},
         {"name": "TensorFlow", "level": "75"}
+      ]
+    },
+    {
+      "category": "Frontend Libraries & Tools",
+      "items": [
+        {"name": "Tailwind CSS", "level": "90"},
+        {"name": "React Hook Form", "level": "85"},
+        {"name": "Zod", "level": "85"},
+        {"name": "Zustand", "level": "85"},
+        {"name": "TanStack Query", "level": "85"},
+        {"name": "Framer Motion", "level": "80"},
+        {"name": "next-intl", "level": "85"},
+        {"name": "Prisma", "level": "85"},
+        {"name": "NextAuth.js", "level": "85"},
+        {"name": "TypeORM", "level": "85"}
       ]
     },
     {
@@ -859,19 +879,75 @@
         {"name": "MySQL", "level": "85"},
         {"name": "Oracle SQL", "level": "85"},
         {"name": "SQLite", "level": "85"},
+        {"name": "Redis", "level": "85"},
+        {"name": "TimescaleDB", "level": "80"},
         {"name": "Neo4j", "level": "75"},
         {"name": "ArangoDB", "level": "75"}
+      ]
+    },
+    {
+      "category": "Message Queues & Event Streaming",
+      "items": [
+        {"name": "RabbitMQ", "level": "85"},
+        {"name": "Kafka", "level": "75"},
+        {"name": "Celery", "level": "85"},
+        {"name": "Bull Queue", "level": "80"}
+      ]
+    },
+    {
+      "category": "Real-Time & WebSockets",
+      "items": [
+        {"name": "WebSockets", "level": "85"},
+        {"name": "Socket.io", "level": "85"},
+        {"name": "Django Channels", "level": "80"}
       ]
     },
     {
       "category": "DevOps & Cloud",
       "items": [
         {"name": "Git", "level": "95"},
-        {"name": "Docker", "level": "85"},
+        {"name": "GitLab CI/CD", "level": "85"},
+        {"name": "Docker", "level": "90"},
+        {"name": "Docker Compose", "level": "90"},
         {"name": "Jenkins", "level": "80"},
         {"name": "Maven", "level": "90"},
-        {"name": "AWS", "level": "70"},
-        {"name": "CI/CD", "level": "80"}
+        {"name": "Nginx", "level": "85"},
+        {"name": "Prometheus", "level": "80"},
+        {"name": "Grafana", "level": "80"},
+        {"name": "AWS", "level": "80"},
+        {"name": "AWS S3", "level": "80"},
+        {"name": "AWS EKS", "level": "75"},
+        {"name": "CI/CD", "level": "85"}
+      ]
+    },
+    {
+      "category": "Third-Party Integrations",
+      "items": [
+        {"name": "Stripe", "level": "85"},
+        {"name": "PayPal", "level": "80"},
+        {"name": "OpenAI API", "level": "80"},
+        {"name": "Firebase", "level": "80"},
+        {"name": "SendGrid", "level": "80"}
+      ]
+    },
+    {
+      "category": "Testing & Quality",
+      "items": [
+        {"name": "Pytest", "level": "85"},
+        {"name": "Jest", "level": "80"},
+        {"name": "Playwright", "level": "75"}
+      ]
+    },
+    {
+      "category": "Backend Tools & Libraries",
+      "items": [
+        {"name": "SQLAlchemy", "level": "85"},
+        {"name": "Alembic", "level": "85"},
+        {"name": "Pydantic", "level": "85"},
+        {"name": "Passport.js", "level": "85"},
+        {"name": "bcrypt", "level": "85"},
+        {"name": "Multer", "level": "80"},
+        {"name": "Nodemailer", "level": "80"}
       ]
     }
   ],

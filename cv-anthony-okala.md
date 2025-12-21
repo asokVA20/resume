@@ -910,8 +910,8 @@ This project involved a comprehensive performance comparison between two leading
 |-------|-------|
 | **Python** | 95% |
 | **Java** | 90% |
-| **JavaScript** | 85% |
-| **TypeScript** | 80% |
+| **JavaScript** | 90% |
+| **TypeScript** | 90% |
 | **PHP** | 85% |
 | **C++** | 85% |
 | **VBA Excel** | 90% |
@@ -922,11 +922,31 @@ This project involved a comprehensive performance comparison between two leading
 |-------|-------|
 | **UiPath** | 95% |
 | **Django** | 90% |
+| **FastAPI** | 90% |
 | **Spring Boot** | 85% |
-| **Next.js** | 80% |
-| **React Native** | 80% |
+| **NestJS** | 85% |
+| **Next.js** | 90% |
+| **React** | 90% |
+| **React Native** | 85% |
+| **Expo** | 85% |
 | **Laravel** | 85% |
+| **Express.js** | 85% |
 | **TensorFlow** | 75% |
+
+### Frontend Libraries & Tools
+
+| Skill | Level |
+|-------|-------|
+| **Tailwind CSS** | 90% |
+| **React Hook Form** | 85% |
+| **Zod** | 85% |
+| **Zustand** | 85% |
+| **TanStack Query** | 85% |
+| **Framer Motion** | 80% |
+| **next-intl** | 85% |
+| **Prisma** | 85% |
+| **NextAuth.js** | 85% |
+| **TypeORM** | 85% |
 
 ### Databases
 
@@ -936,19 +956,75 @@ This project involved a comprehensive performance comparison between two leading
 | **MySQL** | 85% |
 | **Oracle SQL** | 85% |
 | **SQLite** | 85% |
+| **Redis** | 85% |
+| **TimescaleDB** | 80% |
 | **Neo4j** | 75% |
 | **ArangoDB** | 75% |
+
+### Message Queues & Event Streaming
+
+| Skill | Level |
+|-------|-------|
+| **RabbitMQ** | 85% |
+| **Kafka** | 75% |
+| **Celery** | 85% |
+| **Bull Queue** | 80% |
+
+### Real-Time & WebSockets
+
+| Skill | Level |
+|-------|-------|
+| **WebSockets** | 85% |
+| **Socket.io** | 85% |
+| **Django Channels** | 80% |
 
 ### DevOps & Cloud
 
 | Skill | Level |
 |-------|-------|
 | **Git** | 95% |
-| **Docker** | 85% |
+| **GitLab CI/CD** | 85% |
+| **Docker** | 90% |
+| **Docker Compose** | 90% |
 | **Jenkins** | 80% |
 | **Maven** | 90% |
-| **AWS** | 70% |
-| **CI/CD** | 80% |
+| **Nginx** | 85% |
+| **Prometheus** | 80% |
+| **Grafana** | 80% |
+| **AWS** | 80% |
+| **AWS S3** | 80% |
+| **AWS EKS** | 75% |
+| **CI/CD** | 85% |
+
+### Third-Party Integrations
+
+| Skill | Level |
+|-------|-------|
+| **Stripe** | 85% |
+| **PayPal** | 80% |
+| **OpenAI API** | 80% |
+| **Firebase** | 80% |
+| **SendGrid** | 80% |
+
+### Testing & Quality
+
+| Skill | Level |
+|-------|-------|
+| **Pytest** | 85% |
+| **Jest** | 80% |
+| **Playwright** | 75% |
+
+### Backend Tools & Libraries
+
+| Skill | Level |
+|-------|-------|
+| **SQLAlchemy** | 85% |
+| **Alembic** | 85% |
+| **Pydantic** | 85% |
+| **Passport.js** | 85% |
+| **bcrypt** | 85% |
+| **Multer** | 80% |
+| **Nodemailer** | 80% |
 
 ---
 
