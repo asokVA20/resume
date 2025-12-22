@@ -172,5 +172,5 @@ resume/
 ---
 
 
-**Ready to create your professional resume website and PDF? Run `npm run generate` for the website and `npm run generate-pdf` for the PDF! 🚀**
+**Ready to create your professional resume website and PDF? Run `npm run generate` for the website and `npm run generate-pdf` for the PDF!**
 
