@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{personalInfo.name}} - Resume</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- PDF-optimized CSS -->
+    <link rel="stylesheet" href="styles-pdf.css">
+</head>
+<body>
+    <!-- Compact Header -->
+    <header class="pdf-header">
+        <div class="header-main">
+            <div class="header-left">
+                <h1 class="header-name">{{personalInfo.name}}</h1>
+                <p class="header-title">{{personalInfo.title}}</p>
+                <p class="header-subtitle">{{personalInfo.subtitle}}</p>
+            </div>
+            <div class="header-right">
+                <div class="contact-links-title">Contact</div>
+                {{#contactInfo}}
+                {{#if content}}
+                <div class="contact-link">
+                    <i class="{{icon}}"></i>
+                    <span class="contact-text">{{content}}</span>
+                </div>
+                {{/if}}
+                {{/contactInfo}}
+                <div class="contact-links-title" style="margin-top: 4px;">Links</div>
+                {{#socialLinks}}
+                <div class="contact-link">
+                    <i class="{{icon}}"></i>
+                    <span class="contact-url">{{url}}</span>
+                </div>
+                {{/socialLinks}}
+            </div>
+        </div>
+    </header>
+
+    <!-- Professional Summary - Compact -->
+    <section class="pdf-section summary-section">
+        <p class="summary-text">{{personalInfo.description}}</p>
+    </section>
+
+    <!-- Proven Impact and Achievements - Enhanced -->
+    <section class="pdf-section achievements-section">
+        <div class="section-header-enhanced">
+            <div class="title-container">
+                <div class="title-icon-wrapper">
+                    <div class="title-icon">🏆</div>
+                </div>
+                <div class="title-content">
+                    <h2 class="section-title-enhanced">Proven Impact and Achievements</h2>
+                    <div class="title-underline"></div>
+                    <div class="section-subtitle">Delivering measurable results that drive business success</div>
+                </div>
+            </div>
+        </div>
+        <div class="achievements-grid-enhanced">
+            <div class="achievement-box-enhanced highlight-achievement">
+                <div class="achievement-icon-box">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="achievement-content-enhanced">
+                    <div class="achievement-number">80%</div>
+                    <div class="achievement-label">Automation Achieved</div>
+                    <p class="achievement-description">Reduced manual effort by 80% with goal to reach 99% automation at DB Regio AG, transforming operational efficiency</p>
+                </div>
+            </div>
+            <div class="achievement-box-enhanced">
+                <div class="achievement-icon-box">
+                    <i class="fas fa-microservices"></i>
+                </div>
+                <div class="achievement-content-enhanced">
+                    <div class="achievement-number">8+</div>
+                    <div class="achievement-label">Microservices Built</div>
+                    <p class="achievement-description">Designed and implemented enterprise-grade microservices architecture for scalable, resilient systems</p>
+                </div>
+            </div>
+            <div class="achievement-box-enhanced">
+                <div class="achievement-icon-box">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="achievement-content-enhanced">
+                    <div class="achievement-number">25+</div>
+                    <div class="achievement-label">Projects Delivered</div>
+                    <p class="achievement-description">Successfully completed projects for industry leaders including Volkswagen AG and DB Regio AG</p>
+                </div>
+            </div>
+            <div class="achievement-box-enhanced">
+                <div class="achievement-icon-box">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="achievement-content-enhanced">
+                    <div class="achievement-number">25+</div>
+                    <div class="achievement-label">Technologies Mastered</div>
+                    <p class="achievement-description">Expert in Java, Python, JavaScript, TypeScript, React, Django, Spring Boot, Laravel, and cutting-edge frameworks</p>
+                </div>
+            </div>
+            <div class="achievement-box-enhanced">
+                <div class="achievement-icon-box">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="achievement-content-enhanced">
+                    <div class="achievement-number">3</div>
+                    <div class="achievement-label">Languages</div>
+                    <p class="achievement-description">Fluent in English, German, and French - enabling seamless global collaboration and international projects</p>
+                </div>
+            </div>
+            <div class="achievement-box-enhanced">
+                <div class="achievement-icon-box">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="achievement-content-enhanced">
+                    <div class="achievement-number">10+</div>
+                    <div class="achievement-label">Years Experience</div>
+                    <p class="achievement-description">Extensive expertise in automation, software development, machine learning, and safety-critical systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - Compact -->
+    <section class="pdf-section projects-section">
+        <div class="section-header-enhanced">
+            <div class="title-container">
+                <div class="title-icon-wrapper">
+                    <div class="title-icon">🚀</div>
+                </div>
+                <div class="title-content">
+                    <h2 class="section-title-enhanced">Featured Projects</h2>
+                    <div class="title-underline"></div>
+                    <div class="section-subtitle">Showcasing innovative solutions and technical excellence</div>
+                </div>
+            </div>
+        </div>
+        <div class="projects-grid-compact">
+            {{#projects}}
+            <div class="project-compact">
+                <div class="project-header-compact">
+                    <h3 class="project-title-compact">{{title}}</h3>
+                    {{#if future}}
+                    <span class="badge-small">Future</span>
+                    {{/if}}
+                </div>
+                <p class="project-desc-compact">{{description}}</p>
+                <div class="project-tags-compact">
+                    {{#tags}}
+                    <span class="tag-tiny">{{.}}</span>
+                    {{/tags}}
+                </div>
+            </div>
+            {{/projects}}
+        </div>
+    </section>
+
+    <!-- Experience Section - Redesigned for Better Visual Impact -->
+    <section class="pdf-section experience-section">
+        <div class="section-header-enhanced">
+            <div class="title-container">
+                <div class="title-icon-wrapper">
+                    <div class="title-icon">💼</div>
+                </div>
+                <div class="title-content">
+                    <h2 class="section-title-enhanced">Professional Experience</h2>
+                    <div class="title-underline"></div>
+                    <div class="section-subtitle">Comprehensive work history across freelance, professional, and academic projects</div>
+                </div>
+            </div>
+        </div>
+        
+        {{#experienceTabs}}
+        <div class="experience-category experience-category-{{id}}">
+            <h3 class="category-title category-title-{{id}}">
+                <span class="category-icon category-icon-{{id}}"></span>
+                {{title}}
+            </h3>
+            <div class="experience-list experience-list-{{id}}">
+                {{#items}}
+                <div class="experience-item-redesigned experience-item-{{../id}}">
+                    <div class="experience-header-compact">
+                        <div class="experience-title-row">
+                            <h4 class="experience-title">{{title}}</h4>
+                            <span class="experience-date">{{date}}</span>
+                        </div>
+                        <div class="experience-company experience-company-{{../id}}">{{company}}</div>
+                    </div>
+                    {{#if description}}
+                    <p class="experience-description-compact">{{description}}</p>
+                    {{/if}}
+                    {{#if achievements}}
+                    <div class="achievements-compact-grid achievements-{{../id}}">
+                        <ul class="achievements-list-compact-grid">
+                            {{#achievements}}
+                            <li class="achievement-bullet-compact achievement-bullet-{{../../id}}">{{.}}</li>
+                            {{/achievements}}
+                        </ul>
+                    </div>
+                    {{/if}}
+                    {{#if tags}}
+                    <div class="experience-tags-compact tags-{{../id}}">
+                        <div class="tags-container-compact">
+                            {{#tags}}
+                            <span class="tag-compact tag-{{../../id}}">{{.}}</span>
+                            {{/tags}}
+                        </div>
+                    </div>
+                    {{/if}}
+                </div>
+                {{/items}}
+            </div>
+        </div>
+        {{/experienceTabs}}
+    </section>
+
+    <!-- Skills Section - Compact Grid with New Page -->
+    <div class="page-break-before"></div>
+    <section class="pdf-section skills-section">
+        <div class="section-header-enhanced">
+            <div class="title-container">
+                <div class="title-icon-wrapper">
+                    <div class="title-icon">⚡</div>
+                </div>
+                <div class="title-content">
+                    <h2 class="section-title-enhanced">Technical Skills</h2>
+                    <div class="title-underline"></div>
+                    <div class="section-subtitle">Comprehensive expertise across modern technologies and frameworks</div>
+                </div>
+            </div>
+        </div>
+        <div class="skills-grid">
+            {{#skills}}
+            <div class="skill-category-compact">
+                <h3 class="skill-category-title">{{category}}</h3>
+                <div class="skill-tags">
+                    {{#items}}
+                    <span class="skill-tag">{{name}}</span>
+                    {{/items}}
+                </div>
+            </div>
+            {{/skills}}
+        </div>
+    </section>
+
+    <!-- Education Section - Compact with New Page -->
+    <div class="page-break-before"></div>
+    <section class="pdf-section education-section">
+        <div class="section-header-enhanced">
+            <div class="title-container">
+                <div class="title-icon-wrapper">
+                    <div class="title-icon">🎓</div>
+                </div>
+                <div class="title-content">
+                    <h2 class="section-title-enhanced">Education</h2>
+                    <div class="title-underline"></div>
+                    <div class="section-subtitle">Academic qualifications and professional development</div>
+                </div>
+            </div>
+        </div>
+        <div class="education-list-compact">
+            {{#education}}
+            <div class="education-compact">
+                <div class="education-header-compact">
+                    <h3 class="education-degree">{{degree}}</h3>
+                    <span class="education-date-compact">{{date}}</span>
+                </div>
+                <p class="education-institution-compact">{{institution}}</p>
+            </div>
+            {{/education}}
+        </div>
+    </section>
+</body>
+</html>

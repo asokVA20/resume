@@ -2,6 +2,7 @@ import fs from 'fs';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 import { generateMarkdownCV } from './generate-cv-md.js';
+import { generatePDF } from './generate-pdf.js';
 import { fileURLToPath } from 'url';
 
 const execAsync = promisify(exec);
@@ -25,16 +26,22 @@ async function generateAll() {
         }
         
         // 2. Generate Markdown CV
-        console.log('📝 Generating Markdown CV...');
+        console.log('\n📝 Generating Markdown CV...');
         await generateMarkdownCV();
+        
+        // 3. Generate PDF
+        console.log('\n📄 Generating PDF...');
+        await generatePDF();
         
         console.log('\n🎉 All files generated successfully!');
         console.log('\n📁 Generated files:');
         console.log('   - index.html (Website)');
         console.log('   - cv-anthony-okala.md (Markdown CV)');
+        console.log('   - cv-anthony-okala.pdf (PDF Resume)');
         console.log('\n🎨 Features:');
         console.log('   - Professional website with animations');
         console.log('   - Clean Markdown CV format');
+        console.log('   - Professional PDF resume (A4 format)');
         console.log('   - GitHub/GitLab compatible');
         console.log('   - Easy to edit and maintain');
         console.log('   - All sections included');

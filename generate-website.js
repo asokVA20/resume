@@ -116,6 +116,9 @@ function processConditionals(template, data) {
     });
 }
 
+// Export template engine functions for reuse
+export { renderTemplate, processLoops, processConditionals };
+
 // Load template and data
 const template = fs.readFileSync('template.html', 'utf8');
 const data = JSON.parse(fs.readFileSync('personal-data.json', 'utf8'));
