@@ -1015,7 +1015,7 @@
       "title": "Resume",
       "downloadButtons": [
         {
-          "url": "downloads/cv_okala_anthony.pdf",
+          "url": "downloads/cv-anthony-okala.pdf",
           "icon": "fas fa-file-pdf",
           "text": "PDF Version"
         },
