@@ -41,14 +41,9 @@ npm run preview
 npm run generate
 ```
 
-### **Generate Markdown CV**
+### **Generate PDF Resume**
 ```bash
-npm run generate-cv
-```
-
-### **Generate Everything**
-```bash
-npm run generate-all
+npm run generate-pdf
 ```
 
 ## **Available Commands**
@@ -59,27 +54,26 @@ npm run generate-all
 | `npm run build` | Build optimized production files |
 | `npm run preview` | Preview production build locally |
 | `npm run generate` | Generate resume website from template |
-| `npm run generate-cv` | Generate Markdown CV |
-| `npm run generate-all` | Generate both website and CV |
+| `npm run generate-pdf` | Generate PDF resume from template |
 | `npm run install-deps` | Install dependencies |
 
-## **Markdown CV Features**
+## **PDF Resume Features**
 
-### **Clean & Professional:**
-- **GitHub/GitLab compatible** - Perfect for online portfolios
-- **Easy to edit** - Simple Markdown format
-- **Professional structure** - All sections included
-- **Readable format** - Clean, organized layout
-- **Version control friendly** - Track changes easily
-- **Cross-platform** - Works on any system
+### **Professional PDF Output:**
+- **A4 format** - Standard resume size
+- **Print-optimized** - Perfect for printing and sharing
+- **Professional design** - Clean, modern layout
+- **All sections included** - Complete resume content
+- **Consistent styling** - Enhanced section titles and formatting
+- **Page breaks** - Proper section separation
 
 ### **Sections Included:**
-- **Contact Information** - Email, phone, location, social links
-- **Professional Summary** - Key statistics and expertise
-- **Experience** - Work, freelance, and academic experience
-- **Education** - Academic background and achievements
-- **Skills** - Technical skills by category
-- **Projects** - Featured project showcase
+- **Header** - Contact information and professional links
+- **Proven Impact and Achievements** - Key metrics and accomplishments
+- **Featured Projects** - Highlighted project showcase
+- **Professional Experience** - Detailed work history with achievements
+- **Technical Skills** - Comprehensive skills by category
+- **Education** - Academic background
 
 ## **Website Features**
 
@@ -111,12 +105,16 @@ npm run generate-all
 
 ```
 resume/
-├── template.html          # HTML template with placeholders
-├── personal-data.json     # Your personal data in JSON format
-├── generate-website.js    # Template engine script
+├── template.html          # HTML template for website
+├── template-pdf.html     # HTML template for PDF
+├── personal-data.json    # Your personal data in JSON format
+├── generate-website.js   # Website generator script
+├── generate-pdf.js       # PDF generator script
 ├── styles.css            # Website styling
+├── styles-pdf.css        # PDF styling
 ├── script.js             # Website functionality
 ├── index.html            # Generated website
+├── cv-anthony-okala.pdf  # Generated PDF resume
 └── package.json          # Project configuration
 ```
 
@@ -147,10 +145,11 @@ resume/
 
 ## **Tech Stack**
 
-- **Build Tool**: Vite 5+ (fast HMR, optimized builds)
+- **Build Tool**: Vite 7+ (fast HMR, optimized builds)
 - **JavaScript**: Vanilla ES6+ modules
 - **CSS**: Custom CSS with modern features
 - **Template Engine**: Custom Node.js template system
+- **PDF Generation**: Puppeteer (headless Chrome)
 
 ## **Benefits**
 
@@ -173,5 +172,5 @@ resume/
 ---
 
 
-**Ready to create your professional resume website? Run `npm run generate` and get started! 🚀**
+**Ready to create your professional resume website and PDF? Run `npm run generate` for the website and `npm run generate-pdf` for the PDF! 🚀**
 

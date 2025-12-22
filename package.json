@@ -9,10 +9,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "generate": "node generate-website.js",
-    "generate-cv": "node generate-cv-md.js",
     "generate-pdf": "node generate-pdf.js",
-    "generate-all": "node generate-all.js",
-    "install-deps": "npm install"
+    "install-deps": "npm install --legacy-peer-deps"
   },
   "keywords": [
     "resume",
