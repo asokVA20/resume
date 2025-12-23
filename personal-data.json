@@ -283,7 +283,7 @@
         {
           "title": "Daimon Platform - Enterprise Microservices Platform",
           "company": "StartUp initiative",
-          "date": "2024 - 2025",
+          "date": "2025",
           "projectId": "daimon-platform-project",
           "description": "Comprehensive microservices-based digital platform connecting customers with shoe repair businesses. Enterprise-grade project with 8 independent microservices, event-driven architecture, and production-ready infrastructure.",
           "achievements": [
@@ -313,7 +313,7 @@
         {
           "title": "LeitApp Platform - Immigration & Integration Platform",
           "company": "Own Initiative",
-          "date": "2024 - 2025",
+          "date": "2025",
           "projectId": "leitapp-platform-project",
           "description": "Enterprise-grade immigration and integration platform with 19+ microservices across multiple technology stacks. Supports immigrants in Germany with mentorship, document management, job marketplace, AI assistance, and community features.",
           "achievements": [
@@ -343,7 +343,7 @@
         {
           "title": "Multipurpose Service Website - Cross-Platform Application",
           "company": "Own Initiative",
-          "date": "2024 - 2025",
+          "date": "2025",
           "projectId": "multipurpose-service-website-project",
           "description": "Production-ready, full-stack cross-platform application (iOS, Android, Web) with CMS, contact forms, GDPR compliance, and administrative controls. Single codebase supporting multiple platforms.",
           "achievements": [
@@ -366,7 +366,7 @@
         {
           "title": "Logistics Marketplace MVP - Full-Stack Platform",
           "company": "Own Initiative",
-          "date": "2024 - 2025",
+          "date": "2025",
           "projectId": "logistics-marketplace-project",
           "description": "Full-stack multilingual logistics marketplace platform connecting shippers with service providers (freelancers and small logistics companies). Features three-role system with shipment management, provider matching, booking, payment processing, and messaging.",
           "achievements": [
@@ -391,7 +391,7 @@
         {
           "title": "Multipurpose Website - E-Commerce Platform",
           "company": "Own Initiative",
-          "date": "2024 - 2025",
+          "date": "2025",
           "projectId": "multipurpose-website-project",
           "description": "Production-ready, full-stack web application with e-commerce functionality, content management, user authentication, and administrative controls. Built with Next.js 14, TypeScript, Prisma, and NextAuth.js.",
           "achievements": [
@@ -413,7 +413,7 @@
         {
           "title": "Web & Mobile Platform - Corporate Website",
           "company": "Own Initiative",
-          "date": "2024 - 2025",
+          "date": "2025",
           "projectId": "web-mobile-platform-project",
           "description": "Enterprise-grade corporate website with full legal compliance (DSG - Swiss Data Protection Act), responsive design, and advanced UX features. Built with Next.js 14, TypeScript, and modern web standards.",
           "achievements": [
@@ -435,7 +435,7 @@
         {
           "title": "Women's Health NGO Website - Full-Stack Application",
           "company": "Own Initiative",
-          "date": "2024 - 2025",
+          "date": "2025",
           "projectId": "breast-cancer-ngo-website-project",
           "description": "Production-ready, full-stack web application for a Women's Health NGO focused on breast cancer awareness in Adare, Ireland. Features complete content management system, interactive forms, dynamic routing, and enterprise-grade architecture.",
           "achievements": [
@@ -457,7 +457,7 @@
         {
           "title": "Composer Portfolio Website - Multilingual Platform",
           "company": "Own Initiative",
-          "date": "2024 - 2025",
+          "date": "2025",
           "projectId": "composer-website-project",
           "description": "Modern, multilingual portfolio website for a classical composer with internationalization (i18n), interactive music player, works catalog with filtering, and responsive design. Built with Next.js 14 and TypeScript.",
           "achievements": [
