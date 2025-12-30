@@ -51,7 +51,7 @@ My expertise spans across RPA development, full-stack web development, software 
 
 ### Daimon Platform
 
-Enterprise-grade microservices platform connecting customers with shoe repair businesses. Features 8 independent microservices, event-driven architecture with RabbitMQ, full-stack applications (Next.js web dashboard, React Native mobile app), and production-ready infrastructure with Docker, Nginx API Gateway, and monitoring stack.
+Testable freelance prototype of a microservices platform with an OPS-first setup: clear service boundaries, automation-ready delivery, and production-style operations (gateway, observability, repeatable deployments). Implemented 8 independent services with event-driven communication (RabbitMQ), containerized runtime (Docker/Docker Compose), Nginx API Gateway, and a monitoring stack (Prometheus/Grafana).
 
 **Technologies:** Python, FastAPI, Next.js, React Native, TypeScript, PostgreSQL, RabbitMQ, Docker, Microservices, Nginx, Prometheus, Grafana, Stripe, Redis, TimescaleDB
 
@@ -59,11 +59,17 @@ Enterprise-grade microservices platform connecting customers with shoe repair bu
 
 ### LeitApp Platform
 
-Enterprise-grade immigration and integration platform with 19+ microservices across Python, TypeScript, Java, and PHP. Features mentorship, document management, job marketplace, AI assistance (GPT-4, Whisper), voice processing, multi-provider payments, and community features with full GDPR/DSGVO compliance.
+Testable freelance prototype of an integration platform designed for long-term maintainability in regulated environments: microservices architecture (19+ services) across Python/TypeScript/Java/PHP, standardized interfaces, and operations-oriented patterns (security, documentation, async processing). Includes API gateway orchestration, event-driven workloads (queues), real-time communication, and GDPR/DSGVO-aware data handling patterns.
 
 **Technologies:** Python, Django, NestJS, Spring Boot, Laravel, Next.js, TypeScript, PostgreSQL, Redis, AWS, Docker, Microservices, AI/ML, OpenAI, Stripe, WebSockets
 
 ---
+
+### Driver Order Optimizer (Driver Order Optimization)
+
+Testable freelance prototype for operational route and order planning (dashboard + API). Built as a reproducible, automation-friendly setup using TypeScript across frontend/backend, strict validation, and containerized developer environment (VS Code Dev Containers) to enable consistent onboarding and repeatable runs.
+
+**Technologies:** Next.js, Express.js, TypeScript, Docker, Dev Containers, REST API, Google Maps API, Zod, Luxon
 
 ### Multipurpose Service Website
 
