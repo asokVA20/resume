@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asokva20.github.io/resume/sitemap.xml

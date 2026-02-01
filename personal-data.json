@@ -3,71 +3,23 @@
     "name": "Anthony Okala",
     "title": "IT Consultant & Software Engineer",
     "subtitle": "Expert in Process Automation, RPA, Software & Web Development, and AI-Driven Solutions",
-    "description": "With over 10 years of expertise in automation, software development, machine learning, and safety-critical systems. Specializing in Java, Python, JavaScript, TypeScript, PHP, and modern frameworks such as React, Django, Spring Boot, and Laravel. Expert in UiPath, KNIME Analytics, and Power Automate. Fluent in English, German, and French.",
-    "keywords": "IT Consultant, Software Engineer, RPA, Automation, Python, Java, Web Development, AI Solutions"
+    "description": "10+ years in automation, RPA & full-stack development. Java, Python, React, UiPath. Clients: Volkswagen, DB Regio. Fluent in English, German, French.",
+    "metaDescription": "Anthony Okala - IT Consultant & RPA Engineer. 10+ years in automation, Java, Python, React, UiPath. DB Regio, Volkswagen. Hire for RPA, DevOps, full-stack projects.",
+    "keywords": "Anthony Okala, IT Consultant, RPA Engineer, Software Engineer, UiPath, Python, Java, React, Django, DevOps, GitOps, Automation, Full-Stack Developer, DB Regio, Volkswagen, Halle Germany, Remote Developer",
+    "email": "asok.va20@gmail.com",
+    "telephone": "+49 176 77016856",
+    "location": "Halle (Saale), Germany"
   },
   "rotatingTitle": "{IT / RPA Consultant}",
   "floatingCards": [
-    {
-      "index": 1,
-      "icon": "fas fa-code",
-      "text": "Java"
-    },
-    {
-      "index": 2,
-      "icon": "fas fa-robot",
-      "text": "RPA"
-    },
-    {
-      "index": 3,
-      "icon": "fas fa-brain",
-      "text": "AI/ML"
-    },
-    {
-      "index": 4,
-      "icon": "fas fa-cloud",
-      "text": "Cloud"
-    },
-    {
-      "index": 5,
-      "icon": "fas fa-code",
-      "text": "Python"
-    },
-    {
-      "index": 6,
-      "icon": "fas fa-code",
-      "text": "JavaScript"
-    },
-    {
-      "index": 7,
-      "icon": "fas fa-code",
-      "text": "TypeScript"
-    },
-    {
-      "index": 8,
-      "icon": "fas fa-project-diagram",
-      "text": "React.js"
-    },
-    {
-      "index": 9,
-      "icon": "fas fa-project-diagram",
-      "text": "Django"
-    },
-    {
-      "index": 10,
-      "icon": "fas fa-project-diagram",
-      "text": "Spring Boot"
-    },
-    {
-      "index": 11,
-      "icon": "fas fa-project-diagram",
-      "text": "Laravel"
-    },
-    {
-      "index": 12,
-      "icon": "fas fa-project-diagram",
-      "text": "Node.js"
-    }
+    {"index": 1, "icon": "fas fa-code", "text": "Java"},
+    {"index": 2, "icon": "fas fa-robot", "text": "RPA"},
+    {"index": 3, "icon": "fas fa-cogs", "text": "DevOps"},
+    {"index": 4, "icon": "fas fa-code-branch", "text": "GitOps"},
+    {"index": 5, "icon": "fas fa-code", "text": "Python"},
+    {"index": 6, "icon": "fas fa-code", "text": "TypeScript"},
+    {"index": 7, "icon": "fas fa-project-diagram", "text": "React.js"},
+    {"index": 8, "icon": "fas fa-project-diagram", "text": "Django"}
   ],
   "socialLinks": [
     {
@@ -137,51 +89,14 @@
   },
   "projects": [
     {
-      "icon": "fas fa-shoe-prints",
-      "title": "Daimon Platform",
-      "description": "Enterprise-grade microservices platform connecting customers with shoe repair businesses. Features 8 independent microservices, event-driven architecture, and full-stack applications (Next.js web dashboard, React Native mobile app).",
-      "tags": ["Python", "FastAPI", "Next.js", "React Native", "TypeScript", "PostgreSQL", "RabbitMQ", "Docker", "Microservices"],
-      "detailsUrl": "#daimon-platform-project",
-      "onclick": "switchToTab('freelance')",
-      "highlighted": true, 
-      "future": true
-    },
-    {
       "icon": "fas fa-users",
       "title": "LeitApp Platform",
       "description": "Enterprise-grade immigration and integration platform with 19+ microservices across Python, TypeScript, Java, and PHP. Features mentorship, document management, job marketplace, AI assistance, and community features.",
       "tags": ["Python", "Django", "NestJS", "Spring Boot", "Laravel", "Next.js", "TypeScript", "PostgreSQL", "Microservices", "AI/ML"],
       "detailsUrl": "#leitapp-platform-project",
       "onclick": "switchToTab('freelance')",
-      "highlighted": true, 
+      "highlighted": true,
       "future": true
-    },
-    {
-      "icon": "fas fa-tools",
-      "title": "Multipurpose Service Website",
-      "description": "Production-ready, full-stack cross-platform application (iOS, Android, Web) with CMS, contact forms, GDPR compliance, and administrative controls. Built with React Native, Expo, Express.js, and SQLite.",
-      "tags": ["React Native", "Expo", "TypeScript", "Express.js", "SQLite", "Node.js", "Cross-Platform"],
-      "detailsUrl": "#multipurpose-service-website-project",
-      "onclick": "switchToTab('freelance')",
-      "highlighted": true
-    },
-    {
-      "icon": "fas fa-truck",
-      "title": "Logistics Marketplace MVP",
-      "description": "Full-stack multilingual logistics marketplace connecting shippers with service providers. Features three-role system (Shipper, Provider, Admin), provider matching, booking system, payment processing, and messaging.",
-      "tags": ["NestJS", "React Native", "TypeScript", "SQLite", "TypeORM", "i18n", "JWT", "Expo"],
-      "detailsUrl": "#logistics-marketplace-project",
-      "onclick": "switchToTab('freelance')",
-      "highlighted": true
-    },
-    {
-      "icon": "fas fa-shopping-cart",
-      "title": "Multipurpose Website",
-      "description": "Production-ready, full-stack web application with e-commerce functionality, content management, user authentication, and administrative controls. Built with Next.js 14, TypeScript, Prisma, and NextAuth.js.",
-      "tags": ["Next.js", "TypeScript", "Prisma", "NextAuth.js", "Zustand", "Tailwind CSS", "E-commerce"],
-      "detailsUrl": "#multipurpose-website-project",
-      "onclick": "switchToTab('freelance')",
-      "highlighted": true
     },
     {
       "icon": "fas fa-store",
@@ -193,31 +108,14 @@
       "highlighted": true
     },
     {
-      "icon": "fas fa-laptop-code",
-      "title": "Web & Mobile Platform",
-      "description": "Enterprise-grade corporate website with full legal compliance (DSG - Swiss Data Protection Act), responsive design, and advanced UX features. Built with Next.js 14, TypeScript, and modern web standards.",
-      "tags": ["Next.js", "TypeScript", "React", "CSS3", "DSG Compliance", "SEO"],
-      "detailsUrl": "#web-mobile-platform-project",
+      "icon": "fas fa-shoe-prints",
+      "title": "Daimon Platform",
+      "description": "Enterprise-grade microservices platform connecting customers with shoe repair businesses. Features 8 independent microservices, event-driven architecture, and full-stack applications (Next.js web dashboard, React Native mobile app).",
+      "tags": ["Python", "FastAPI", "Next.js", "React Native", "TypeScript", "PostgreSQL", "RabbitMQ", "Docker", "Microservices"],
+      "detailsUrl": "#daimon-platform-project",
       "onclick": "switchToTab('freelance')",
-      "highlighted": true
-    },
-    {
-      "icon": "fas fa-heartbeat",
-      "title": "Women's Health NGO Website",
-      "description": "Production-ready, full-stack web application for a Women's Health NGO focused on breast cancer awareness. Features complete CMS, interactive forms, dynamic routing, and enterprise-grade architecture.",
-      "tags": ["Next.js", "TypeScript", "React Hook Form", "Tailwind CSS", "API Routes"],
-      "detailsUrl": "#breast-cancer-ngo-website-project",
-      "onclick": "switchToTab('freelance')",
-      "highlighted": true
-    },
-    {
-      "icon": "fas fa-music",
-      "title": "Composer Portfolio Website",
-      "description": "Modern, multilingual portfolio website for a classical composer with internationalization (i18n), interactive music player, works catalog with filtering, and responsive design. Built with Next.js 14 and TypeScript.",
-      "tags": ["Next.js", "TypeScript", "next-intl", "Framer Motion", "Tailwind CSS", "i18n"],
-      "detailsUrl": "#composer-website-project",
-      "onclick": "switchToTab('freelance')",
-      "highlighted": true
+      "highlighted": true,
+      "future": true
     },
     {
       "icon": "fas fa-route",
@@ -227,6 +125,24 @@
       "detailsUrl": "#driver-order-optimizer-project",
       "onclick": "switchToTab('freelance')",
       "highlighted": true
+    },
+    {
+      "icon": "fas fa-truck",
+      "title": "Logistics Marketplace MVP",
+      "description": "Full-stack multilingual logistics marketplace connecting shippers with service providers. Features three-role system (Shipper, Provider, Admin), provider matching, booking system, payment processing, and messaging.",
+      "tags": ["NestJS", "React Native", "TypeScript", "SQLite", "TypeORM", "i18n", "JWT", "Expo"],
+      "detailsUrl": "#logistics-marketplace-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": false
+    },
+    {
+      "icon": "fas fa-laptop-code",
+      "title": "Web & Mobile Platform",
+      "description": "Enterprise-grade corporate website with full legal compliance (DSG - Swiss Data Protection Act), responsive design, and advanced UX features. Built with Next.js 14, TypeScript, and modern web standards.",
+      "tags": ["Next.js", "TypeScript", "React", "CSS3", "DSG Compliance", "SEO"],
+      "detailsUrl": "#web-mobile-platform-project",
+      "onclick": "switchToTab('freelance')",
+      "highlighted": false
     },
     {
       "icon": "fas fa-robot",
@@ -242,44 +158,6 @@
       "description": "Modern business website built with Next.js, TypeScript, and Tailwind CSS. Features responsive design, multi-language support, and professional UI/UX.",
       "tags": ["Next.js", "TypeScript", "Tailwind CSS"],
       "liveUrl": "https://okas-fld.de/"
-    },
-    {
-      "icon": "fas fa-heart",
-      "title": "Vivantes-Humanitas Web Application",
-      "description": "Django-based web application for Vivantes Humanitas e.V., enabling efficient management of volunteer registrations and activity tracking.",
-      "tags": ["Django", "Python", "HTML", "CSS"],
-      "liveUrl": "https://www.vivantes-humanitas.org/"
-    },
-    {
-      "icon": "fas fa-building",
-      "title": "Pentak Sarl International Website",
-      "description": "Professional business website for Pentak Sarl International, featuring modern design, responsive layout, and comprehensive company information.",
-      "tags": ["Laravel", "HTML", "CSS", "JavaScript"],
-      "liveUrl": "https://pentak-global.com/"
-    },
-    {
-      "icon": "fas fa-brain",
-      "title": "Autonomous Drone Navigation",
-      "description": "End-to-End Learning System for autonomous drone navigation using Python, TensorFlow, and AirSim simulation, achieving Level 4 navigation capabilities.",
-      "tags": ["Python", "TensorFlow", "AirSim"],
-      "detailsUrl": "#drone-navigation-project",
-      "onclick": "switchToTab('school')"
-    },
-    {
-      "icon": "fas fa-cogs",
-      "title": "Software Architecture Tool",
-      "description": "Custom software architecture tool supporting Model-Driven Architecture for automotive sector, improving development efficiency in safety-critical systems.",
-      "tags": ["Java", "Eclipse", "UML"],
-      "detailsUrl": "#software-architecture-project",
-      "onclick": "switchToTab('school')"
-    },
-    {
-      "icon": "fas fa-mobile-alt",
-      "title": "Cross-Platform Mobile Apps",
-      "description": "Full-stack, cross-platform mobile applications using TypeScript, React Native Expo, with Java Spring Boot, Python Django, and PHP Laravel backends.",
-      "tags": ["React Native", "TypeScript", "Spring Boot"],
-      "detailsUrl": "#csk-mobile-apps-project",
-      "onclick": "switchToTab('freelance')"
     }
   ],
   "experienceTabs": [

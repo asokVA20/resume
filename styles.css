@@ -280,7 +280,8 @@ body {
     width: 100%;
 }
 
-.nav-link:focus {
+.nav-link:focus,
+.nav-link:focus-visible {
     outline: none;
     box-shadow: var(--focus-ring);
     border-radius: var(--radius-md);
@@ -490,7 +491,8 @@ body {
     transform: translateY(0);
 }
 
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-primary:focus-visible {
     outline: none;
     box-shadow: var(--focus-ring-offset), var(--shadow-colored);
 }
@@ -521,7 +523,8 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-.btn-secondary:focus {
+.btn-secondary:focus,
+.btn-secondary:focus-visible {
     outline: none;
     box-shadow: var(--focus-ring);
 }
@@ -561,6 +564,13 @@ body {
 
 .social-link:nth-child(3):hover {
     background: linear-gradient(135deg, #FC6D26, #E55100);
+}
+
+.social-link:focus,
+.social-link:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: var(--radius-full);
 }
 
 /* Floating Elements */
@@ -1298,6 +1308,12 @@ body {
     left: 100%;
 }
 
+.tab-button:focus,
+.tab-button:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
 .tab-content {
     display: none;
     animation: fadeInUp 0.5s ease-out;
@@ -1441,8 +1457,8 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60px;
-    background: linear-gradient(to bottom, transparent, var(--white));
+    height: 48px;
+    background: linear-gradient(to bottom, rgba(249, 250, 251, 0), var(--gray-50) 60%);
     pointer-events: none;
 }
 
@@ -1466,6 +1482,13 @@ body {
     transform: translateX(4px);
 }
 
+.achievements-title:focus,
+.achievements-title:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: var(--radius-sm);
+}
+
 .achievements-title i {
     font-size: var(--font-size-sm);
     transition: transform 0.3s ease;
@@ -1476,29 +1499,31 @@ body {
 }
 
 .toggle-achievements {
-    background: none;
-    border: none;
+    background: var(--primary-blue-50);
+    border: 1px solid var(--primary-blue-100);
     color: var(--primary-blue);
     font-size: var(--font-size-sm);
     font-weight: 600;
     cursor: pointer;
-    padding: var(--spacing-2) 0;
-    margin-top: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-4);
+    margin-top: var(--spacing-3);
     display: inline-flex;
     align-items: center;
-    gap: var(--spacing-1);
+    gap: var(--spacing-2);
     transition: var(--transition-normal);
+    border-radius: var(--radius-full);
 }
 
 .toggle-achievements:hover {
-    color: var(--secondary-teal);
-    transform: translateX(2px);
+    background: var(--primary-blue-100);
+    color: var(--primary-blue-dark);
+    transform: translateY(-1px);
 }
 
-.toggle-achievements:focus {
+.toggle-achievements:focus,
+.toggle-achievements:focus-visible {
     outline: none;
     box-shadow: var(--focus-ring);
-    border-radius: var(--radius-sm);
 }
 
 .toggle-achievements i {
@@ -1988,7 +2013,8 @@ body {
     width: 100%;
 }
 
-.project-link:focus {
+.project-link:focus,
+.project-link:focus-visible {
     outline: none;
     box-shadow: var(--focus-ring);
     border-radius: var(--radius-sm);
@@ -2243,7 +2269,8 @@ body {
     box-shadow: var(--shadow-md);
 }
 
-.download-btn:focus {
+.download-btn:focus,
+.download-btn:focus-visible {
     outline: none;
     box-shadow: var(--focus-ring);
 }
@@ -3736,7 +3763,8 @@ body {
     transform: translateY(-4px);
 }
 
-.scroll-to-top:focus {
+.scroll-to-top:focus,
+.scroll-to-top:focus-visible {
     outline: none;
     box-shadow: var(--focus-ring-offset), var(--shadow-colored);
 }

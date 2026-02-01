@@ -123,11 +123,33 @@ export { renderTemplate, processLoops, processConditionals };
 const template = fs.readFileSync('template.html', 'utf8');
 const data = JSON.parse(fs.readFileSync('personal-data.json', 'utf8'));
 
+// SEO: Add computed fields for structured data
+data.personalInfo.sameAsJson = JSON.stringify((data.socialLinks || []).map(s => s.url));
+data.personalInfo.metaDescription = data.personalInfo.metaDescription || data.personalInfo.description;
+
 // Generate the website
 const generatedHTML = renderTemplate(template, data);
 
 // Write the generated HTML
 fs.writeFileSync('index.html', generatedHTML);
+
+// Generate robots.txt and sitemap.xml for SEO
+const baseUrl = 'https://asokva20.github.io/resume';
+fs.writeFileSync('robots.txt', `User-agent: *
+Allow: /
+
+Sitemap: ${baseUrl}/sitemap.xml
+`);
+fs.writeFileSync('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${baseUrl}/</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+`);
 
 console.log('Website generated successfully!');
 console.log('Files created:');
