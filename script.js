@@ -9,11 +9,13 @@ const contactForm = document.getElementById('contact-form');
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
     initNavbar();
+    initActiveNavLink();
     initScrollAnimations();
     initSkillBars();
     initContactForm();
     initScrollIndicator();
     initFloatingElements();
+    initScrollToTop();
 });
 
 // Navbar functionality
@@ -48,6 +50,44 @@ function initNavbar() {
             hamburger.classList.remove('active');
         }
     });
+}
+
+// Active nav link on scroll - highlights current section in navigation
+function initActiveNavLink() {
+    const sections = ['home', 'achievements', 'about', 'projects', 'experience', 'skills', 'education', 'contact'];
+    
+    const observerOptions = {
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+    };
+    
+    const updateActiveLink = (sectionId) => {
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active');
+            }
+        });
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                updateActiveLink(id);
+            }
+        });
+    }, observerOptions);
+    
+    sections.forEach(sectionId => {
+        const section = document.getElementById(sectionId);
+        if (section) observer.observe(section);
+    });
+    
+    // Set Home as active on initial load
+    if (window.scrollY < 100) {
+        updateActiveLink('home');
+    }
 }
 
 // Scroll animations
@@ -527,6 +567,27 @@ function initScrollProgress() {
 
 // Initialize scroll progress
 initScrollProgress();
+
+// Scroll-to-top button - appears after scrolling down
+function initScrollToTop() {
+    const button = document.getElementById('scroll-to-top');
+    if (!button) return;
+
+    const toggleVisibility = () => {
+        if (window.scrollY > 400) {
+            button.classList.add('visible');
+        } else {
+            button.classList.remove('visible');
+        }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    toggleVisibility(); // Check on load
+
+    button.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
 // Add particle effect to hero section
 function initParticleEffect() {
