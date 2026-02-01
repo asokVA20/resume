@@ -594,6 +594,51 @@
                     
                     <div class="project-image">
                         <div class="project-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Dropshipping Platform</h3>
+                        <p>Full-stack e-commerce dropshipping platform with AI-powered search, conversational commerce, Stripe payments, returns management, shipping provider integration (USPS), and supplier/dropshipping APIs. PWA support, Docker deployment, and monitoring (Prometheus/Grafana).</p>
+                        <div class="project-tags">
+                            
+                            <span class="tag">Next.js</span>
+                            
+                            <span class="tag">React 19</span>
+                            
+                            <span class="tag">TypeScript</span>
+                            
+                            <span class="tag">PostgreSQL</span>
+                            
+                            <span class="tag">Stripe</span>
+                            
+                            <span class="tag">OpenAI</span>
+                            
+                            <span class="tag">Docker</span>
+                            
+                            <span class="tag">PWA</span>
+                            
+                            <span class="tag">Playwright</span>
+                            
+                            <span class="tag">Jest</span>
+                            
+                        </div>
+                        <div class="project-links">
+                            
+                            
+                            <a href="#ecommerce-dropshipping-project" class="project-link" onclick="switchToTab('freelance')">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Details
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card project-highlighted">
+                    
+                    <div class="project-image">
+                        <div class="project-icon">
                             <i class="fas fa-laptop-code"></i>
                         </div>
                     </div>
@@ -1307,6 +1352,71 @@
                                     <span class="tag">bcryptjs</span>
                                     
                                     <span class="tag">JWT</span>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item" id="ecommerce-dropshipping-project">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-header">
+                                    <h3 class="timeline-title">E-Commerce Dropshipping Platform - Full-Stack AI-Powered Platform</h3>
+                                    <span class="timeline-company">Own Initiative</span>
+                                    <span class="timeline-date">2025</span>
+                                </div>
+                                <div class="timeline-description">
+                                    
+                                    
+                                    <p>Full-stack e-commerce dropshipping platform with AI-powered search, conversational commerce, Stripe payments, returns management, shipping provider integration (USPS), and supplier/dropshipping APIs (e.g. AliExpress). Production-ready with PWA support, Docker containerization, and optional Prometheus/Grafana monitoring.</p>
+                                    
+                                    
+                                    <div class="achievements-list collapsed" data-achievements-id="ecommerce-dropshipping-project">
+                                        <strong class="achievements-title" onclick="toggleAchievements('ecommerce-dropshipping-project')">
+                                            Key Achievements
+                                            <i class="fas fa-chevron-down"></i>
+                                        </strong>
+                                        <ul><li>Developed production-ready full-stack e-commerce platform using Next.js 16.1.1 (App Router) with React 19.2.3, TypeScript 5, Turbopack, and standalone output for optimized deployment</li><li>Implemented AI-powered semantic search via OpenAI: analyzeSearchIntent with entities and filters, fallback to text search when API unavailable, paginated product results with PostgreSQL</li><li>Built personalized recommendations API and UI (AI/behavior-driven) and OpenAI-based conversational chatbot for storefront support</li><li>Created multi-step checkout flow: shipping form, payment via Stripe Payment Intents and Elements, order review, success page with PCI-aware handling</li><li>Integrated Stripe server-side: create-intent API, webhook for payment events, client-side Stripe.js and @stripe/react-stripe-js</li><li>Implemented returns and refunds: returns API (create, list, get by ID), return request flow and return-details UI</li><li>Built pluggable shipping architecture: base provider, manager, USPS provider; rate and admin provider APIs</li><li>Designed dropshipping/supplier integration: base supplier, supplier manager, AliExpress-like supplier implementation; admin supplier CRUD and sync API</li><li>Developed order lifecycle with shipping label/tracking APIs and dropship API for supplier fulfillment</li><li>Implemented JWT-based auth (login, register, me) with bcryptjs and role-based access (customer, admin)</li><li>Built admin dashboard: layout, sidebar, header; pages for products, shipping providers, suppliers</li><li>Created product catalog with full CRUD, categories, variants, images, featured products, search API with pagination</li><li>Implemented persistent cart API (get, add, update, remove) and cart UI (dropdown, summary, items) with Zustand state management</li><li>Added PWA support: manifest.json, service worker (sw.js) for caching static/dynamic and API patterns; PWA provider component</li><li>Built analytics: events API and client-side analytics hook for behavior tracking</li><li>Implemented rate limiting utility (in-memory; production path for Redis) and /api/health for DB connectivity and monitoring</li><li>Set up Docker multi-stage build (deps, builder, runner), Docker Compose (app, PostgreSQL 16, Redis 7, nginx, prometheus, grafana), deploy.sh for backup/deploy/rollback</li><li>Implemented Jest for unit/component tests and Playwright E2E for homepage, products, cart-checkout across Chromium, Firefox, WebKit, and mobile</li><li>Designed PostgreSQL schema (users, products, categories, orders, cart, returns, analytics), connection pooling, migrations via schema.sql</li><li>Used Zustand for client state (auth, cart, products) and TanStack React Query for server state and caching</li><li>Built responsive UI with Tailwind CSS 4, Radix UI, Headless UI, Framer Motion, cva for component variants, and Lucide/Heroicons</li></ul>
+                                        <button class="toggle-achievements" onclick="toggleAchievements('ecommerce-dropshipping-project')" data-id="ecommerce-dropshipping-project">
+                                            <span class="toggle-text">Show More</span>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </button>
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="timeline-tags">
+                                    
+                                    <span class="tag">Next.js</span>
+                                    
+                                    <span class="tag">React 19</span>
+                                    
+                                    <span class="tag">TypeScript</span>
+                                    
+                                    <span class="tag">PostgreSQL</span>
+                                    
+                                    <span class="tag">Redis</span>
+                                    
+                                    <span class="tag">Stripe</span>
+                                    
+                                    <span class="tag">OpenAI</span>
+                                    
+                                    <span class="tag">Docker</span>
+                                    
+                                    <span class="tag">PWA</span>
+                                    
+                                    <span class="tag">Jest</span>
+                                    
+                                    <span class="tag">Playwright</span>
+                                    
+                                    <span class="tag">Zustand</span>
+                                    
+                                    <span class="tag">TanStack Query</span>
+                                    
+                                    <span class="tag">Tailwind CSS</span>
+                                    
+                                    <span class="tag">Radix UI</span>
                                     
                                 </div>
                                 
