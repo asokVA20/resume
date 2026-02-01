@@ -119,9 +119,9 @@ function initScrollAnimations() {
     });
 
     // Add staggered animation to project cards
-    const projectCards = document.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('.projects-grid .project-card');
     projectCards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.15}s`;
+        card.style.animationDelay = `${index * 0.12}s`;
     });
 }
 
