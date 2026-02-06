@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { renderTemplate } from './generate-website.js';
+import { renderTemplate, getPreparedData } from './generate-website.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,22 +11,17 @@ async function generatePDF() {
     console.log('📄 Generating PDF from HTML...\n');
     
     try {
-        // Load PDF template and data
+        // Load PDF template (same data as website via getPreparedData)
         const templatePath = path.join(__dirname, 'template-pdf.html');
-        const dataPath = path.join(__dirname, 'personal-data.json');
         
         if (!fs.existsSync(templatePath)) {
             throw new Error('template-pdf.html not found');
         }
         
-        if (!fs.existsSync(dataPath)) {
-            throw new Error('personal-data.json not found');
-        }
-        
         const template = fs.readFileSync(templatePath, 'utf8');
-        const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
+        const data = getPreparedData();
         
-        // Generate HTML from template
+        // Generate HTML from template (design from template-pdf.html, data matches website)
         console.log('📝 Rendering template...');
         const html = renderTemplate(template, data);
         
@@ -52,9 +47,11 @@ async function generatePDF() {
         // Wait for fonts and styles to load
         await new Promise(resolve => setTimeout(resolve, 1000));
         
-        // Generate PDF
+        // Generate PDF (output to downloads/ to match website download link)
         console.log('📄 Generating PDF...');
-        const pdfPath = path.join(__dirname, 'cv-anthony-okala.pdf');
+        const downloadsDir = path.join(__dirname, 'downloads');
+        if (!fs.existsSync(downloadsDir)) fs.mkdirSync(downloadsDir, { recursive: true });
+        const pdfPath = path.join(downloadsDir, 'cv-anthony-okala.pdf');
         
         await page.pdf({
             path: pdfPath,

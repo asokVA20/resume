@@ -119,13 +119,21 @@ function processConditionals(template, data) {
 // Export template engine functions for reuse
 export { renderTemplate, processLoops, processConditionals };
 
-// Load template and data
-const template = fs.readFileSync('template.html', 'utf8');
-const data = JSON.parse(fs.readFileSync('personal-data.json', 'utf8'));
+/**
+ * Load personal-data.json and apply all computed fields (same as used for website and PDF).
+ * Use this so website and PDF always share the same data source and transformations.
+ */
+function getPreparedData() {
+    const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'personal-data.json'), 'utf8'));
 
-// SEO: Add computed fields for structured data
-data.personalInfo.sameAsJson = JSON.stringify((data.socialLinks || []).map(s => s.url));
-data.personalInfo.metaDescription = data.personalInfo.metaDescription || data.personalInfo.description;
+    // SEO: Add computed fields for structured data
+    data.personalInfo.sameAsJson = JSON.stringify((data.socialLinks || []).map(s => s.url));
+    data.personalInfo.metaDescription = data.personalInfo.metaDescription || data.personalInfo.description;
+
+    // Build YAML-style skills: project_name -> list of skills used
+    buildSkillsYaml(data);
+    return data;
+}
 
 // Build YAML-style skills: project_name -> list of skills used
 function toYamlKey(s) {
@@ -135,6 +143,7 @@ function toYamlKey(s) {
     return lower.replace(/\s+&\s+/g, '_').replace(/\s+/g, '_').replace(/[^a-z0-9_]/gi, '');
 }
 
+function buildSkillsYaml(data) {
 const projectSkills = new Map(); // projectName -> Set(skill)
 
 function addSkills(projectName, skills) {
@@ -166,6 +175,7 @@ function addSkills(projectName, skills) {
     if (m) addSkills(institution, m[1].split(',').map(s => s.trim()).filter(s => s.length > 1));
 });
 
+
 // Build YAML lines: technical_skills -> project_name -> [skills]
 const yamlLines = [];
 yamlLines.push({ spaces: '', key: 'technical_skills', colon: true });
@@ -195,6 +205,13 @@ orderedProjects.forEach(projectName => {
 });
 
 data.skillsYamlLines = yamlLines;
+}
+
+export { getPreparedData };
+
+// Load template and data (same data used for website and PDF)
+const template = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf8');
+const data = getPreparedData();
 
 // Generate the website
 const generatedHTML = renderTemplate(template, data);

@@ -47,7 +47,7 @@
         <p class="summary-text">{{personalInfo.description}}</p>
     </section>
 
-    <!-- Proven Impact and Achievements - Enhanced -->
+    <!-- Proven Impact & Achievements (matches website section exactly) -->
     <section class="pdf-section achievements-section">
         <div class="section-header-enhanced">
             <div class="title-container">
@@ -55,9 +55,9 @@
                     <div class="title-icon">🏆</div>
                 </div>
                 <div class="title-content">
-                    <h2 class="section-title-enhanced">Proven Impact and Achievements</h2>
+                    <h2 class="section-title-enhanced">Proven Impact & Achievements</h2>
                     <div class="title-underline"></div>
-                    <div class="section-subtitle">Delivering measurable results that drive business success</div>
+                    <div class="section-subtitle">80% automation achieved • 25+ projects delivered • Clients: Volkswagen, DB Regio</div>
                 </div>
             </div>
         </div>
@@ -69,17 +69,7 @@
                 <div class="achievement-content-enhanced">
                     <div class="achievement-number">80%</div>
                     <div class="achievement-label">Automation Achieved</div>
-                    <p class="achievement-description">Reduced manual effort by 80% with goal to reach 99% automation at DB Regio AG, transforming operational efficiency</p>
-                </div>
-            </div>
-            <div class="achievement-box-enhanced">
-                <div class="achievement-icon-box">
-                    <i class="fas fa-microservices"></i>
-                </div>
-                <div class="achievement-content-enhanced">
-                    <div class="achievement-number">8+</div>
-                    <div class="achievement-label">Microservices Built</div>
-                    <p class="achievement-description">Designed and implemented enterprise-grade microservices architecture for scalable, resilient systems</p>
+                    <p class="achievement-description">Reduced manual effort by 80% with goal to reach 99% automation at DB Regio AG</p>
                 </div>
             </div>
             <div class="achievement-box-enhanced">
@@ -89,7 +79,7 @@
                 <div class="achievement-content-enhanced">
                     <div class="achievement-number">25+</div>
                     <div class="achievement-label">Projects Delivered</div>
-                    <p class="achievement-description">Successfully completed projects for industry leaders including Volkswagen AG and DB Regio AG</p>
+                    <p class="achievement-description">Successfully completed projects for clients including Volkswagen AG and DB Regio AG</p>
                 </div>
             </div>
             <div class="achievement-box-enhanced">
@@ -99,7 +89,7 @@
                 <div class="achievement-content-enhanced">
                     <div class="achievement-number">25+</div>
                     <div class="achievement-label">Technologies Mastered</div>
-                    <p class="achievement-description">Expert in Java, Python, JavaScript, TypeScript, React, Django, Spring Boot, Laravel, and cutting-edge frameworks</p>
+                    <p class="achievement-description">Expert in Java, Python, JavaScript, TypeScript, React, Django, Spring Boot, Laravel, and more</p>
                 </div>
             </div>
             <div class="achievement-box-enhanced">
@@ -109,7 +99,7 @@
                 <div class="achievement-content-enhanced">
                     <div class="achievement-number">3</div>
                     <div class="achievement-label">Languages</div>
-                    <p class="achievement-description">Fluent in English, German, and French - enabling seamless global collaboration and international projects</p>
+                    <p class="achievement-description">Fluent in English, German, and French - enabling global collaboration</p>
                 </div>
             </div>
             <div class="achievement-box-enhanced">
@@ -119,7 +109,7 @@
                 <div class="achievement-content-enhanced">
                     <div class="achievement-number">10+</div>
                     <div class="achievement-label">Years Experience</div>
-                    <p class="achievement-description">Extensive expertise in automation, software development, machine learning, and safety-critical systems</p>
+                    <p class="achievement-description">Extensive expertise in automation, software development, and safety-critical systems</p>
                 </div>
             </div>
         </div>
@@ -135,7 +125,7 @@
                 <div class="title-content">
                     <h2 class="section-title-enhanced">Featured Projects</h2>
                     <div class="title-underline"></div>
-                    <div class="section-subtitle">Showcasing innovative solutions and technical excellence</div>
+                    <div class="section-subtitle">Enterprise microservices, e-commerce platforms, automation & AI-driven solutions</div>
                 </div>
             </div>
         </div>
@@ -169,7 +159,7 @@
                 <div class="title-content">
                     <h2 class="section-title-enhanced">Professional Experience</h2>
                     <div class="title-underline"></div>
-                    <div class="section-subtitle">Comprehensive work history across freelance, professional, and academic projects</div>
+                    <div class="section-subtitle">Freelance, corporate & academic—Volkswagen, DB Regio, TU Clausthal</div>
                 </div>
             </div>
         </div>
@@ -190,6 +180,9 @@
                         </div>
                         <div class="experience-company experience-company-{{../id}}">{{company}}</div>
                     </div>
+                    {{#if supervisors}}
+                    <p class="experience-supervisors-compact"><strong>Supervisors:</strong> {{supervisors}}</p>
+                    {{/if}}
                     {{#if description}}
                     <p class="experience-description-compact">{{description}}</p>
                     {{/if}}
@@ -229,7 +222,7 @@
                 <div class="title-content">
                     <h2 class="section-title-enhanced">Technical Skills</h2>
                     <div class="title-underline"></div>
-                    <div class="section-subtitle">Comprehensive expertise across modern technologies and frameworks</div>
+                    <div class="section-subtitle">25+ technologies across RPA, full-stack, cloud & DevOps</div>
                 </div>
             </div>
         </div>
@@ -258,7 +251,7 @@
                 <div class="title-content">
                     <h2 class="section-title-enhanced">Education</h2>
                     <div class="title-underline"></div>
-                    <div class="section-subtitle">Academic qualifications and professional development</div>
+                    <div class="section-subtitle">M.Sc. & B.Sc. Computer Science • TU Clausthal</div>
                 </div>
             </div>
         </div>
