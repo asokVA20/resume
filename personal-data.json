@@ -940,9 +940,9 @@
           "text": "PDF Version"
         },
         {
-          "url": "downloads/cv-anthony-okala.md",
+          "url": "downloads/cv-anthony-okala.docx",
           "icon": "fas fa-file-alt",
-          "text": "MD Version"
+          "text": "DOCX Version"
         }
       ]
     }
