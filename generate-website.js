@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath, pathToFileURL } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -209,24 +209,30 @@ data.skillsYamlLines = yamlLines;
 
 export { getPreparedData };
 
-// Load template and data (same data used for website and PDF)
-const template = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf8');
-const data = getPreparedData();
+// Run generation only when called directly (avoid side effects on import)
+const isDirectRun =
+    !!process.argv[1] &&
+    (import.meta.url === pathToFileURL(process.argv[1]).href || process.argv[1].endsWith('generate-website.js'));
 
-// Generate the website
-const generatedHTML = renderTemplate(template, data);
+if (isDirectRun) {
+    // Load template and data (same data used for website and PDF)
+    const template = fs.readFileSync(path.join(__dirname, 'template.html'), 'utf8');
+    const data = getPreparedData();
 
-// Write the generated HTML
-fs.writeFileSync('index.html', generatedHTML);
+    // Generate the website
+    const generatedHTML = renderTemplate(template, data);
 
-// Generate robots.txt and sitemap.xml for SEO
-const baseUrl = 'https://asokva20.github.io/resume';
-fs.writeFileSync('robots.txt', `User-agent: *
+    // Write the generated HTML
+    fs.writeFileSync('index.html', generatedHTML);
+
+    // Generate robots.txt and sitemap.xml for SEO
+    const baseUrl = 'https://asokva20.github.io/resume';
+    fs.writeFileSync('robots.txt', `User-agent: *
 Allow: /
 
 Sitemap: ${baseUrl}/sitemap.xml
 `);
-fs.writeFileSync('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
+    fs.writeFileSync('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>${baseUrl}/</loc>
@@ -237,9 +243,10 @@ fs.writeFileSync('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 </urlset>
 `);
 
-console.log('Website generated successfully!');
-console.log('Files created:');
-console.log('- template.html (HTML template)');
-console.log('- personal-data.json (Personal data)');
-console.log('- generate-website.js (Template engine)');
-console.log('- index.html (Generated website)');
+    console.log('Website generated successfully!');
+    console.log('Files created:');
+    console.log('- template.html (HTML template)');
+    console.log('- personal-data.json (Personal data)');
+    console.log('- generate-website.js (Template engine)');
+    console.log('- index.html (Generated website)');
+}
