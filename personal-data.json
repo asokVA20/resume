@@ -3,9 +3,9 @@
     "name": "Anthony Okala",
     "title": "IT Consultant & Software Engineer",
     "subtitle": "Expert in Process Automation, RPA, Software & Web Development, and AI-Driven Solutions",
-    "description": "10+ years in automation, RPA & full-stack development. Java, Python, React, UiPath. Clients: Volkswagen, DB Regio. Fluent in English, German, French.",
-    "metaDescription": "Anthony Okala - IT Consultant & RPA Engineer. 10+ years in automation, Java, Python, React, UiPath. DB Regio, Volkswagen. Hire for RPA, DevOps, full-stack projects.",
-    "keywords": "Anthony Okala, IT Consultant, RPA Engineer, Software Engineer, UiPath, Python, Java, React, Django, DevOps, GitOps, Automation, Full-Stack Developer, DB Regio, Volkswagen, Halle Germany, Remote Developer",
+    "description": "10+ years in automation, RPA & full-stack development. Java, Python, React, UiPath, KNIME Analytics, Power Automate, Power BI. Clients: Volkswagen, DB Regio. Fluent in English, German, French.",
+    "metaDescription": "Anthony Okala - IT Consultant & RPA Engineer. 10+ years in automation, Java, Python, React, UiPath, KNIME Analytics, Power Automate, Power BI. DB Regio, Volkswagen. Hire for RPA, DevOps, full-stack projects.",
+    "keywords": "Anthony Okala, IT Consultant, RPA Engineer, Software Engineer, UiPath, KNIME Analytics, Power Automate, Power BI, Python, Java, React, Django, DevOps, GitOps, Automation, Full-Stack Developer, DB Regio, Volkswagen, Halle Germany, Remote Developer",
     "email": "asok.va20@gmail.com",
     "telephone": "+49 176 77016856",
     "location": "Halle (Saale), Germany"
@@ -40,7 +40,7 @@
   ],
   "about": {
     "journey": "I'm Anthony Okala, an experienced IT Consultant and Software Engineer with over 10 years of expertise in automation, software and web development, machine learning, and system development for safety-critical applications. I hold a Master's degree in Computer Science from Technical University of Clausthal.",
-    "current": "Currently serving as IT Consultant at DB Regio AG, I specialize in developing automation solutions using Python and UiPath, achieving 80% reduction in manual effort with a goal to reach 99% automation. I'm also the Co-Founder & CEO of ASOK Solutions Engineering SARL.",
+    "current": "Currently serving as IT Consultant at DB Regio AG, I specialize in developing automation solutions using Python and UiPath, KNIME Analytics, achieving 80% reduction in manual effort with a goal to reach 99% automation. I'm also the Co-Founder & CEO of ASOK Solutions Engineering SARL.",
     "expertise": "My expertise spans across RPA development, full-stack web development, software development, machine learning, and system architecture, with proven experience working with automotive clients like Volkswagen AG and delivering solutions for safety-critical systems and DB Regio AG by delivering automation solutions.",
     "expertiseItems": [
       {
@@ -147,8 +147,8 @@
     {
       "icon": "fas fa-robot",
       "title": "RPA Automation Solutions",
-      "description": "Developed comprehensive automation solutions using Python and UiPath, achieving 80% reduction in manual effort for data processing and visualization tasks.",
-      "tags": ["Python", "UiPath", "VBA Excel"],
+      "description": "Developed comprehensive automation solutions using Python, UiPath, KNIME Analytics, Power Automate and Power BI, achieving 80% reduction in manual effort for data processing and visualization tasks.",
+      "tags": ["Python", "UiPath", "KNIME Analytics", "Power Automate", "Power BI", "VBA Excel"],
       "detailsUrl": "#rpa-automation-project",
       "onclick": "switchToTab('work')"
     },
@@ -560,14 +560,14 @@
           "date": "August 2023 - Present",
           "projectId": "rpa-automation-project",
           "achievements": [
-            "Developed automation solutions using Python and UiPath, achieving 80% reduction in manual effort with a goal to reach 99% automation",
-            "Built and deployed RPA robots using UiPath Orchestrator, enabling seamless task automation and improving team productivity",
+            "Developed automation solutions using Python and RPA tools, achieving 80% reduction in manual effort with a goal to reach 99% automation",
+            "Built and deployed RPA robots using UiPath Orchestrator and KNIME Analytics, enabling seamless task automation and improving team productivity",
             "Collaborated with cross-functional teams to design and implement robust software solutions, improving system efficiency and client satisfaction",
             "Utilized Agile (SCRUM) to manage and deliver projects on time, ensuring continuous improvement and client alignment",
             "Employed version control with Git and GitLab, ensuring smooth collaboration and code integrity",
             "Leveraged VBA (Visual Basic for Applications) to automate complex and time-consuming Excel processes, significantly improving efficiency and accuracy"
           ],
-          "tags": ["Python", "UiPath", "RPA", "VBA Excel", "Git", "GitLab", "Agile", "SCRUM"]
+          "tags": ["Python", "UiPath", "KNIME Analytics", "Power Automate", "Power BI", "RPA", "VBA Excel", "Git", "GitLab", "Agile", "SCRUM"]
         },
         {
           "title": "Software Developer",
@@ -593,11 +593,11 @@
           "projectId": "db-regio-rpa-developer",
           "achievements": [
             "Automated data processing tasks using Python and VBA Excel, cutting processing time by at least 30%",
-            "Developed and deployed RPA robots with UiPath, streamlining business workflows and improving task accuracy and efficiency",
+            "Developed and deployed RPA robots with UiPath and KNIME Analytics, streamlining business workflows and improving task accuracy and efficiency",
             "Worked with Agile methodologies (SCRUM) to manage automation tasks, ensuring timely delivery and client satisfaction",
             "Collaborated remotely with teams via MS Teams and GitLab to ensure smooth communication and version control"
           ],
-          "tags": ["Python", "VBA Excel", "UiPath", "RPA", "Agile", "SCRUM"]
+          "tags": ["Python", "VBA Excel", "UiPath", "KNIME Analytics", "Power Automate", "Power BI", "RPA", "Agile", "SCRUM"]
         },
         {
           "title": "Working Student - Software Developer",
@@ -781,6 +781,9 @@
       "category": "Frameworks & Tools",
       "items": [
         {"name": "UiPath", "level": "95"},
+        {"name": "KNIME Analytics", "level": "95"},
+        {"name": "Power Automate", "level": "95"},
+        {"name": "Power BI", "level": "95"},
         {"name": "Django", "level": "90"},
         {"name": "FastAPI", "level": "90"},
         {"name": "Spring Boot", "level": "85"},
